@@ -11,8 +11,8 @@ import pandas as pd
 import pymysql
 conn = pymysql.connect(host='localhost',
                        port=3306,
-                       user='social',
-                       passwd='socialpassword',
+                       user='root',
+                       passwd='1234',
                        db='socialdb')
 
 header = {
@@ -25,17 +25,17 @@ def get_news(news_url):
     req = requests.get(news_url, headers=header)
     soup = BeautifulSoup(req.content, 'html.parser')
 
-    title = soup.select('h3#articleTitle')[0].text
+    title = soup.select('h2.media_end_head_headline')[0].text
     news_detail.append(title)
 
-    pdate = soup.select('.t11')[0].get_text()[:11]
+    pdate = soup.select('.media_end_head_info_datestamp_bunch')[0].get_text()[3:14]
     news_detail.append(pdate)
 
-    _text = soup.select('#articleBodyContents')[0].get_text().replace('\n', " ")
+    _text = soup.select('#dic_area')[0].get_text().replace('\n', " ")
     text = _text.replace("// flahs 오류를 우회하기 위함 함수 추가 function _flash_removeCallback() {}", "" )
     news_detail.append(text.strip())
-
-    pcompany = soup.select('div.article_footer')[0].a.get_text().split()[0].strip()
+    #pcompany = soup.select('#div.article_footer')[0].a.get_text().split()[0].strip()
+    pcompany = soup.select('p.c_text')[0].get_text().split()[0].strip()
     news_detail.append(pcompany)
 
     return news_detail
@@ -47,8 +47,8 @@ columns = ['날씨', '신문사', '제목', '내용']
 df = pd.DataFrame(columns=columns)
 
 query = '달러'
-s_date = "2022.04.01"
-e_date = "2022.04.14"
+s_date = "2022.04.22"
+e_date = "2022.04.29"
 s_from = s_date.replace(".","")
 e_to = e_date.replace(".","")
 page = 1
