@@ -1,0 +1,1530 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f75fa355a84, pid=475, tid=0x00007f76170a7180
+#
+# JRE version: OpenJDK Runtime Environment (8.0_312-b07) (build 1.8.0_312-8u312-b07-0ubuntu1~20.04-b07)
+# Java VM: OpenJDK 64-Bit Server VM (25.312-b07 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [_jpype.cpython-38-x86_64-linux-gnu.so+0x3ea84]  JPClass::invoke(JPJavaFrame&, _jobject*, _jclass*, _jmethodID*, jvalue*)+0x74
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000055b2d3465000):  JavaThread "main" [_thread_in_native, id=475, stack(0x00007ffca7343000,0x00007ffca7443000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007ffca743dd00, RCX=0x0000000000000000, RDX=0x00007f75e1ae3978
+RSP=0x00007ffca743db60, RBP=0x00007ffca743dd10, RSI=0x0000000000000000, RDI=0x000055b2d3465000
+R8 =0x00007f75ceb6d2f0, R9 =0x0000000000000001, R10=0x00007ffca743d7e0, R11=0x00007f75d1e97358
+R12=0x00007ffca743db80, R13=0x000055b2d22ce598, R14=0x0000000000000000, R15=0x000055b2d47f3c30
+RIP=0x00007f75fa355a84, EFLAGS=0x0000000000010202, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007ffca743db60)
+0x00007ffca743db60:   00000000000000a0 000055b2d4713590
+0x00007ffca743db70:   000055b2d14931a0 00007f75e1b3e670
+0x00007ffca743db80:   000055b2d20d70d0 0000000000000001
+0x00007ffca743db90:   0000000000000030 00007f75fa37d6c7
+0x00007ffca743dba0:   000000000000000f 0000000000000010
+0x00007ffca743dbb0:   00007ffca743dc10 00007f7616d1bc80
+0x00007ffca743dbc0:   00007f75fa2f9940 000055b2d47f44c0
+0x00007ffca743dbd0:   000055b2d2e948e0 00007ffca743dd00
+0x00007ffca743dbe0:   00007ffca743dd30 00007ffca743dc80
+0x00007ffca743dbf0:   00007ffca743dd10 00007f75fa371058
+0x00007ffca743dc00:   000055b2d47f83c0 00000001a743dd10
+0x00007ffca743dc10:   000055b2d4713590 0000000000000018
+0x00007ffca743dc20:   000055b2d47f83c0 000055b2d47f83d8
+0x00007ffca743dc30:   000055b2d47f83d8 0000000000000000
+0x00007ffca743dc40:   000055b2d48089c0 00007ffca743dc80
+0x00007ffca743dc50:   00007ffca743dd00 00007ffca743dd10
+0x00007ffca743dc60:   00007ffca743dd30 0000000000000001
+0x00007ffca743dc70:   000055b2d47f4570 00007f75fa373cf5
+0x00007ffca743dc80:   b4a69a7476197960 000055b2d47f44c0
+0x00007ffca743dc90:   000055b2d48133d0 000055b2d4813430
+0x00007ffca743dca0:   000055b2d4813430 0001000000000003
+0x00007ffca743dcb0:   00007ffca743dcd0 00007ffca743dd00
+0x00007ffca743dcc0:   00007f75fa3071a0 00007ffca743dd30
+0x00007ffca743dcd0:   00007ffca743dd10 00007f75cd6b4e50
+0x00007ffca743dce0:   000055b2d4713d48 00007f75fa38aec3
+0x00007ffca743dcf0:   000055b2d1498dc0 00007f75fa2f92f0
+0x00007ffca743dd00:   000055b2d47f47c0 000055b2d1264d72
+0x00007ffca743dd10:   000055b2d2d18280 000055b2d3465250
+0x00007ffca743dd20:   000055b2d4710100 8c6f686b639c9900
+0x00007ffca743dd30:   00007f76100eb300 00007f75cd6b4e50
+0x00007ffca743dd40:   000055b2d48089c0 000055b2d48089d0
+0x00007ffca743dd50:   000055b2d48089d0 00007f75fa5cded6 
+
+Instructions: (pc=0x00007f75fa355a84)
+0x00007f75fa355a64:   ff ff 49 89 c5 4c 89 e7 e8 af 54 ff ff 4d 85 ed
+0x00007f75fa355a74:   74 6a 4c 89 ee 48 89 ef e8 ef 64 ff ff 48 89 c6
+0x00007f75fa355a84:   48 8b 06 45 31 c0 4c 89 e9 48 89 ea 48 89 df ff
+0x00007f75fa355a94:   50 38 48 83 c4 68 48 89 d8 5b 5d 41 5c 41 5d 41 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00007ffca743dd00 is pointing into the stack for thread: 0x000055b2d3465000
+RCX=0x0000000000000000 is an unknown value
+RDX=0x00007f75e1ae3978: <offset 0xde1978> in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so at 0x00007f75e0d02000
+RSP=0x00007ffca743db60 is pointing into the stack for thread: 0x000055b2d3465000
+RBP=0x00007ffca743dd10 is pointing into the stack for thread: 0x000055b2d3465000
+RSI=0x0000000000000000 is an unknown value
+RDI=0x000055b2d3465000 is a thread
+R8 ={method} {0x00007f75ceb6d2f0} 'findClassForObject' '(Ljava/lang/Object;)J' in 'org/jpype/manager/TypeManager'
+R9 =0x0000000000000001 is an unknown value
+R10=0x00007ffca743d7e0 is pointing into the stack for thread: 0x000055b2d3465000
+R11=0x00007f75d1e97358 is at entry_point+24 in (nmethod*)0x00007f75d1e971d0
+R12=0x00007ffca743db80 is pointing into the stack for thread: 0x000055b2d3465000
+R13=0x000055b2d22ce598 is an unknown value
+R14=0x0000000000000000 is an unknown value
+R15=0x000055b2d47f3c30 is an unknown value
+
+
+Stack: [0x00007ffca7343000,0x00007ffca7443000],  sp=0x00007ffca743db60,  free space=1002k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [_jpype.cpython-38-x86_64-linux-gnu.so+0x3ea84]  JPClass::invoke(JPJavaFrame&, _jobject*, _jclass*, _jmethodID*, jvalue*)+0x74
+C  0x000055b2d3465250
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f75ac001000 JavaThread "SIGTERM handler" daemon [_thread_blocked, id=729, stack(0x00007f75cd55e000,0x00007f75cd65f000)]
+  0x000055b2d45d6800 JavaThread "Service Thread" daemon [_thread_blocked, id=720, stack(0x00007f75cdc15000,0x00007f75cdd16000)]
+  0x000055b2d45d5800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=719, stack(0x00007f75cdd17000,0x00007f75cde17000)]
+  0x000055b2d45d5000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=718, stack(0x00007f75cde18000,0x00007f75cdf18000)]
+  0x000055b2d45d1000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=717, stack(0x00007f75cdf19000,0x00007f75ce019000)]
+  0x000055b2d45c0000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=716, stack(0x00007f75ce01f000,0x00007f75ce120000)]
+  0x000055b2d45aa000 JavaThread "Finalizer" daemon [_thread_blocked, id=715, stack(0x00007f75ce293000,0x00007f75ce394000)]
+  0x000055b2d45a7000 JavaThread "Reference Handler" daemon [_thread_blocked, id=714, stack(0x00007f75ce394000,0x00007f75ce495000)]
+=>0x000055b2d3465000 JavaThread "main" [_thread_in_native, id=475, stack(0x00007ffca7343000,0x00007ffca7443000)]
+
+Other Threads:
+  0x000055b2d45a0800 VMThread [stack: 0x00007f75ce496000,0x00007f75ce596000] [id=713]
+  0x000055b2d45d7800 WatcherThread [stack: 0x00007f75cdb15000,0x00007f75cdc15000] [id=721]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000000c0000000, size: 1024 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ PSYoungGen      total 111616K, used 44229K [0x00000000eab00000, 0x00000000f8500000, 0x0000000100000000)
+  eden space 103424K, 34% used [0x00000000eab00000,0x00000000ece361c0,0x00000000f1000000)
+  from space 8192K, 99% used [0x00000000f1000000,0x00000000f17fb290,0x00000000f1800000)
+  to   space 8192K, 0% used [0x00000000f7d00000,0x00000000f7d00000,0x00000000f8500000)
+ ParOldGen       total 136704K, used 93326K [0x00000000c0000000, 0x00000000c8580000, 0x00000000eab00000)
+  object space 136704K, 68% used [0x00000000c0000000,0x00000000c5b23a80,0x00000000c8580000)
+ Metaspace       used 5362K, capacity 5598K, committed 5888K, reserved 1056768K
+  class space    used 593K, capacity 673K, committed 768K, reserved 1048576K
+
+Card table byte_map: [0x00007f75d16d6000,0x00007f75d18d7000] byte_map_base: 0x00007f75d10d6000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f75e1ae7720
+ Begin Bits: [0x00007f75cf17c000, 0x00007f75d017c000)
+ End Bits:   [0x00007f75d017c000, 0x00007f75d117c000)
+
+Polling page: 0x00007f761744e000
+
+CodeCache: size=245760Kb used=3209Kb max_used=3230Kb free=242550Kb
+ bounds [0x00007f75d1c97000, 0x00007f75d1fc7000, 0x00007f75e0c97000]
+ total_blobs=965 nmethods=671 adapters=208
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 12.766 Thread 0x000055b2d45d5000 nmethod 652 0x00007f75d1fb06d0 code [0x00007f75d1fb0820, 0x00007f75d1fb0978]
+Event: 13.453 Thread 0x000055b2d45d1000 nmethod 565% 0x00007f75d1fb8950 code [0x00007f75d1fb8d40, 0x00007f75d1fbc7b0]
+Event: 15.284 Thread 0x000055b2d45d5800  668       3       java.lang.ref.ReferenceQueue::reallyPoll (65 bytes)
+Event: 15.285 Thread 0x000055b2d45d5800 nmethod 668 0x00007f75d1fb0010 code [0x00007f75d1fb01a0, 0x00007f75d1fb0610]
+Event: 32.053 Thread 0x000055b2d45d5800  669       1       org.jpype.ref.JPypeReferenceQueue::access$100 (5 bytes)
+Event: 32.053 Thread 0x000055b2d45d5800 nmethod 669 0x00007f75d1fac790 code [0x00007f75d1fac8e0, 0x00007f75d1fac9d0]
+Event: 32.304 Thread 0x000055b2d45d5800  670       1       org.jpype.ref.JPypeReferenceQueue::access$200 (5 bytes)
+Event: 32.304 Thread 0x000055b2d45d5800 nmethod 670 0x00007f75d1fac4d0 code [0x00007f75d1fac620, 0x00007f75d1fac710]
+Event: 58.981 Thread 0x000055b2d45d5800  671       3       java.util.HashMap::clear (50 bytes)
+Event: 58.981 Thread 0x000055b2d45d5800 nmethod 671 0x00007f75d1fabe50 code [0x00007f75d1fabfe0, 0x00007f75d1fac3b0]
+
+GC Heap History (10 events):
+Event: 0.459 GC heap before
+{Heap before GC invocations=2 (full 1):
+ PSYoungGen      total 59904K, used 1120K [0x00000000eab00000, 0x00000000eed80000, 0x0000000100000000)
+  eden space 51712K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000edd80000)
+  from space 8192K, 13% used [0x00000000edd80000,0x00000000ede98020,0x00000000ee580000)
+  to   space 8192K, 0% used [0x00000000ee580000,0x00000000ee580000,0x00000000eed80000)
+ ParOldGen       total 136704K, used 8K [0x00000000c0000000, 0x00000000c8580000, 0x00000000eab00000)
+  object space 136704K, 0% used [0x00000000c0000000,0x00000000c0002000,0x00000000c8580000)
+ Metaspace       used 3850K, capacity 4706K, committed 4864K, reserved 1056768K
+  class space    used 419K, capacity 466K, committed 512K, reserved 1048576K
+Event: 0.464 GC heap after
+Heap after GC invocations=2 (full 1):
+ PSYoungGen      total 59904K, used 0K [0x00000000eab00000, 0x00000000eed80000, 0x0000000100000000)
+  eden space 51712K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000edd80000)
+  from space 8192K, 0% used [0x00000000edd80000,0x00000000edd80000,0x00000000ee580000)
+  to   space 8192K, 0% used [0x00000000ee580000,0x00000000ee580000,0x00000000eed80000)
+ ParOldGen       total 136704K, used 1008K [0x00000000c0000000, 0x00000000c8580000, 0x00000000eab00000)
+  object space 136704K, 0% used [0x00000000c0000000,0x00000000c00fc120,0x00000000c8580000)
+ Metaspace       used 3850K, capacity 4706K, committed 4864K, reserved 1056768K
+  class space    used 419K, capacity 466K, committed 512K, reserved 1048576K
+}
+Event: 12.182 GC heap before
+{Heap before GC invocations=3 (full 1):
+ PSYoungGen      total 59904K, used 51712K [0x00000000eab00000, 0x00000000eed80000, 0x0000000100000000)
+  eden space 51712K, 100% used [0x00000000eab00000,0x00000000edd80000,0x00000000edd80000)
+  from space 8192K, 0% used [0x00000000edd80000,0x00000000edd80000,0x00000000ee580000)
+  to   space 8192K, 0% used [0x00000000ee580000,0x00000000ee580000,0x00000000eed80000)
+ ParOldGen       total 136704K, used 1008K [0x00000000c0000000, 0x00000000c8580000, 0x00000000eab00000)
+  object space 136704K, 0% used [0x00000000c0000000,0x00000000c00fc120,0x00000000c8580000)
+ Metaspace       used 5036K, capacity 5294K, committed 5632K, reserved 1056768K
+  class space    used 559K, capacity 641K, committed 768K, reserved 1048576K
+Event: 12.235 GC heap after
+Heap after GC invocations=3 (full 1):
+ PSYoungGen      total 59904K, used 8174K [0x00000000eab00000, 0x00000000eed80000, 0x0000000100000000)
+  eden space 51712K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000edd80000)
+  from space 8192K, 99% used [0x00000000ee580000,0x00000000eed7b9b8,0x00000000eed80000)
+  to   space 8192K, 0% used [0x00000000edd80000,0x00000000edd80000,0x00000000ee580000)
+ ParOldGen       total 136704K, used 38996K [0x00000000c0000000, 0x00000000c8580000, 0x00000000eab00000)
+  object space 136704K, 28% used [0x00000000c0000000,0x00000000c2615070,0x00000000c8580000)
+ Metaspace       used 5036K, capacity 5294K, committed 5632K, reserved 1056768K
+  class space    used 559K, capacity 641K, committed 768K, reserved 1048576K
+}
+Event: 12.320 GC heap before
+{Heap before GC invocations=4 (full 1):
+ PSYoungGen      total 59904K, used 59886K [0x00000000eab00000, 0x00000000eed80000, 0x0000000100000000)
+  eden space 51712K, 100% used [0x00000000eab00000,0x00000000edd80000,0x00000000edd80000)
+  from space 8192K, 99% used [0x00000000ee580000,0x00000000eed7b9b8,0x00000000eed80000)
+  to   space 8192K, 0% used [0x00000000edd80000,0x00000000edd80000,0x00000000ee580000)
+ ParOldGen       total 136704K, used 38996K [0x00000000c0000000, 0x00000000c8580000, 0x00000000eab00000)
+  object space 136704K, 28% used [0x00000000c0000000,0x00000000c2615070,0x00000000c8580000)
+ Metaspace       used 5072K, capacity 5294K, committed 5632K, reserved 1056768K
+  class space    used 561K, capacity 641K, committed 768K, reserved 1048576K
+Event: 12.361 GC heap after
+Heap after GC invocations=4 (full 1):
+ PSYoungGen      total 59904K, used 8172K [0x00000000eab00000, 0x00000000f2000000, 0x0000000100000000)
+  eden space 51712K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000edd80000)
+  from space 8192K, 99% used [0x00000000edd80000,0x00000000ee57b290,0x00000000ee580000)
+  to   space 8192K, 0% used [0x00000000f1800000,0x00000000f1800000,0x00000000f2000000)
+ ParOldGen       total 136704K, used 64303K [0x00000000c0000000, 0x00000000c8580000, 0x00000000eab00000)
+  object space 136704K, 47% used [0x00000000c0000000,0x00000000c3ecbf18,0x00000000c8580000)
+ Metaspace       used 5072K, capacity 5294K, committed 5632K, reserved 1056768K
+  class space    used 561K, capacity 641K, committed 768K, reserved 1048576K
+}
+Event: 12.424 GC heap before
+{Heap before GC invocations=5 (full 1):
+ PSYoungGen      total 59904K, used 59884K [0x00000000eab00000, 0x00000000f2000000, 0x0000000100000000)
+  eden space 51712K, 100% used [0x00000000eab00000,0x00000000edd80000,0x00000000edd80000)
+  from space 8192K, 99% used [0x00000000edd80000,0x00000000ee57b290,0x00000000ee580000)
+  to   space 8192K, 0% used [0x00000000f1800000,0x00000000f1800000,0x00000000f2000000)
+ ParOldGen       total 136704K, used 64303K [0x00000000c0000000, 0x00000000c8580000, 0x00000000eab00000)
+  object space 136704K, 47% used [0x00000000c0000000,0x00000000c3ecbf18,0x00000000c8580000)
+ Metaspace       used 5083K, capacity 5294K, committed 5632K, reserved 1056768K
+  class space    used 561K, capacity 641K, committed 768K, reserved 1048576K
+Event: 12.456 GC heap after
+Heap after GC invocations=5 (full 1):
+ PSYoungGen      total 111616K, used 8172K [0x00000000eab00000, 0x00000000f2000000, 0x0000000100000000)
+  eden space 103424K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000f1000000)
+  from space 8192K, 99% used [0x00000000f1800000,0x00000000f1ffb290,0x00000000f2000000)
+  to   space 8192K, 0% used [0x00000000f1000000,0x00000000f1000000,0x00000000f1800000)
+ ParOldGen       total 136704K, used 71023K [0x00000000c0000000, 0x00000000c8580000, 0x00000000eab00000)
+  object space 136704K, 51% used [0x00000000c0000000,0x00000000c455bf18,0x00000000c8580000)
+ Metaspace       used 5083K, capacity 5294K, committed 5632K, reserved 1056768K
+  class space    used 561K, capacity 641K, committed 768K, reserved 1048576K
+}
+Event: 12.608 GC heap before
+{Heap before GC invocations=6 (full 1):
+ PSYoungGen      total 111616K, used 111596K [0x00000000eab00000, 0x00000000f2000000, 0x0000000100000000)
+  eden space 103424K, 100% used [0x00000000eab00000,0x00000000f1000000,0x00000000f1000000)
+  from space 8192K, 99% used [0x00000000f1800000,0x00000000f1ffb290,0x00000000f2000000)
+  to   space 8192K, 0% used [0x00000000f1000000,0x00000000f1000000,0x00000000f1800000)
+ ParOldGen       total 136704K, used 71023K [0x00000000c0000000, 0x00000000c8580000, 0x00000000eab00000)
+  object space 136704K, 51% used [0x00000000c0000000,0x00000000c455bf18,0x00000000c8580000)
+ Metaspace       used 5107K, capacity 5294K, committed 5632K, reserved 1056768K
+  class space    used 565K, capacity 641K, committed 768K, reserved 1048576K
+Event: 12.666 GC heap after
+Heap after GC invocations=6 (full 1):
+ PSYoungGen      total 111616K, used 8172K [0x00000000eab00000, 0x00000000f8500000, 0x0000000100000000)
+  eden space 103424K, 0% used [0x00000000eab00000,0x00000000eab00000,0x00000000f1000000)
+  from space 8192K, 99% used [0x00000000f1000000,0x00000000f17fb290,0x00000000f1800000)
+  to   space 8192K, 0% used [0x00000000f7d00000,0x00000000f7d00000,0x00000000f8500000)
+ ParOldGen       total 136704K, used 93326K [0x00000000c0000000, 0x00000000c8580000, 0x00000000eab00000)
+  object space 136704K, 68% used [0x00000000c0000000,0x00000000c5b23a80,0x00000000c8580000)
+ Metaspace       used 5107K, capacity 5294K, committed 5632K, reserved 1056768K
+  class space    used 565K, capacity 641K, committed 768K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 0.595 Thread 0x000055b2d3465000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f75d1e85cc0 method=java.util.LinkedHashMap.afterNodeInsertion(Z)V @ 15
+Event: 12.130 Thread 0x000055b2d3465000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f75d1e58688 method=java.lang.AbstractStringBuilder.append(Ljava/lang/String;)Ljava/lang/AbstractStringBuilder; @ 1
+Event: 12.130 Thread 0x000055b2d3465000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f75d1e512bc method=java.lang.AbstractStringBuilder.append(Ljava/lang/String;)Ljava/lang/AbstractStringBuilder; @ 1
+Event: 12.240 Thread 0x000055b2d3465000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f75d1ed027c method=kr.ac.kaist.swrc.jhannanum.plugin.MajorPlugin.MorphAnalyzer.ChartMorphAnalyzer.Trie.<init>(I)V @ 92
+Event: 12.502 Thread 0x000055b2d3465000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f75d1f158bc method=kr.ac.kaist.swrc.jhannanum.share.Code.toTripleArray(Ljava/lang/String;)[C @ 140
+Event: 12.577 Thread 0x000055b2d3465000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f75d1f297b0 method=kr.ac.kaist.swrc.jhannanum.plugin.MajorPlugin.MorphAnalyzer.ChartMorphAnalyzer.Trie.store([CLkr/ac/kaist/swrc/jhannanum/plugin/MajorPlugin/MorphAnalyzer/ChartMorphAnalyzer/T
+Event: 12.578 Thread 0x000055b2d3465000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f75d1eeeec4 method=kr.ac.kaist.swrc.jhannanum.plugin.MajorPlugin.MorphAnalyzer.ChartMorphAnalyzer.Trie.search([C)I @ 172
+Event: 12.581 Thread 0x000055b2d3465000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f75d1f46380 method=kr.ac.kaist.swrc.jhannanum.share.Code.toTripleArray(Ljava/lang/String;)[C @ 238
+Event: 12.597 Thread 0x000055b2d3465000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f75d1f24140 method=sun.nio.cs.UTF_8$Decoder.decodeArrayLoop(Ljava/nio/ByteBuffer;Ljava/nio/CharBuffer;)Ljava/nio/charset/CoderResult; @ 77
+Event: 12.723 Thread 0x000055b2d3465000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f75d1ef24dc method=java.lang.String.trim()Ljava/lang/String; @ 23
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.523 Thread 0x000055b2d3465000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000eacd81e0) thrown at [/build/openjdk-8-85WbbC/openjdk-8-8u312-b07/src/hotspot/src/share/vm/prims/jvm.cpp, line 1521]
+Event: 0.523 Thread 0x000055b2d3465000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000eacdaae8) thrown at [/build/openjdk-8-85WbbC/openjdk-8-8u312-b07/src/hotspot/src/share/vm/prims/jvm.cpp, line 1521]
+Event: 0.523 Thread 0x000055b2d3465000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000eacdacf8) thrown at [/build/openjdk-8-85WbbC/openjdk-8-8u312-b07/src/hotspot/src/share/vm/prims/jvm.cpp, line 1521]
+Event: 0.540 Thread 0x000055b2d3465000 Exception <a 'sun/nio/fs/UnixException'> (0x00000000eae42f80) thrown at [/build/openjdk-8-85WbbC/openjdk-8-8u312-b07/src/hotspot/src/share/vm/prims/jni.cpp, line 711]
+Event: 0.583 Thread 0x000055b2d3465000 Implicit null exception at 0x00007f75d1e7ec32 to 0x00007f75d1e7ed45
+Event: 0.583 Thread 0x000055b2d3465000 Exception <a 'sun/nio/fs/UnixException'> (0x00000000eb41a098) thrown at [/build/openjdk-8-85WbbC/openjdk-8-8u312-b07/src/hotspot/src/share/vm/prims/jni.cpp, line 711]
+Event: 0.583 Thread 0x000055b2d3465000 Implicit null exception at 0x00007f75d1e84143 to 0x00007f75d1e84185
+Event: 12.130 Thread 0x000055b2d3465000 Implicit null exception at 0x00007f75d1e582b5 to 0x00007f75d1e58675
+Event: 12.130 Thread 0x000055b2d3465000 Implicit null exception at 0x00007f75d1e50ef6 to 0x00007f75d1e512a5
+Event: 58.980 Thread 0x000055b2d4720000 Exception <a 'java/lang/InterruptedException'> (0x00000000ecd8e0a0) thrown at [/build/openjdk-8-85WbbC/openjdk-8-8u312-b07/src/hotspot/src/share/vm/runtime/objectMonitor.cpp, line 1692]
+
+Events (10 events):
+Event: 58.974 loading class java/util/IdentityHashMap$KeyIterator done
+Event: 58.974 Thread 0x00007f7588001800 Thread added: 0x00007f7588001800
+Event: 58.980 Executing VM operation: ThreadDump
+Event: 58.980 Executing VM operation: ThreadDump done
+Event: 58.980 Executing VM operation: RevokeBias
+Event: 58.980 Executing VM operation: RevokeBias done
+Event: 58.980 loading class java/lang/Throwable$WrappedPrintStream
+Event: 58.981 loading class java/lang/Throwable$WrappedPrintStream done
+Event: 58.981 Thread 0x000055b2d4720000 Thread exited: 0x000055b2d4720000
+Event: 58.981 Thread 0x00007f7588001800 Thread exited: 0x00007f7588001800
+
+
+Dynamic libraries:
+c0000000-c8580000 rw-p 00000000 00:00 0 
+c8580000-eab00000 ---p 00000000 00:00 0 
+eab00000-f8500000 rw-p 00000000 00:00 0 
+f8500000-100000000 ---p 00000000 00:00 0 
+100000000-1000c0000 rw-p 00000000 00:00 0 
+1000c0000-140000000 ---p 00000000 00:00 0 
+55b2d112b000-55b2d118a000 r--p 00000000 08:10 59825                      /home/taemin/apps/miniconda3/envs/py38/bin/python3.8
+55b2d118a000-55b2d1381000 r-xp 0005f000 08:10 59825                      /home/taemin/apps/miniconda3/envs/py38/bin/python3.8
+55b2d1381000-55b2d1468000 r--p 00256000 08:10 59825                      /home/taemin/apps/miniconda3/envs/py38/bin/python3.8
+55b2d1469000-55b2d146e000 r--p 0033d000 08:10 59825                      /home/taemin/apps/miniconda3/envs/py38/bin/python3.8
+55b2d146e000-55b2d14a6000 rw-p 00342000 08:10 59825                      /home/taemin/apps/miniconda3/envs/py38/bin/python3.8
+55b2d14a6000-55b2d14c6000 rw-p 00000000 00:00 0 
+55b2d20d2000-55b2d487f000 rw-p 00000000 00:00 0                          [heap]
+7f7588000000-7f7588021000 rw-p 00000000 00:00 0 
+7f7588021000-7f758c000000 ---p 00000000 00:00 0 
+7f758c000000-7f758c021000 rw-p 00000000 00:00 0 
+7f758c021000-7f7590000000 ---p 00000000 00:00 0 
+7f7590000000-7f7590021000 rw-p 00000000 00:00 0 
+7f7590021000-7f7594000000 ---p 00000000 00:00 0 
+7f7594000000-7f7594021000 rw-p 00000000 00:00 0 
+7f7594021000-7f7598000000 ---p 00000000 00:00 0 
+7f7598000000-7f7598785000 rw-p 00000000 00:00 0 
+7f7598785000-7f759c000000 ---p 00000000 00:00 0 
+7f759c000000-7f759c021000 rw-p 00000000 00:00 0 
+7f759c021000-7f75a0000000 ---p 00000000 00:00 0 
+7f75a0000000-7f75a09f5000 rw-p 00000000 00:00 0 
+7f75a09f5000-7f75a4000000 ---p 00000000 00:00 0 
+7f75a4000000-7f75a4456000 rw-p 00000000 00:00 0 
+7f75a4456000-7f75a8000000 ---p 00000000 00:00 0 
+7f75a8000000-7f75a8021000 rw-p 00000000 00:00 0 
+7f75a8021000-7f75ac000000 ---p 00000000 00:00 0 
+7f75ac000000-7f75ac021000 rw-p 00000000 00:00 0 
+7f75ac021000-7f75b0000000 ---p 00000000 00:00 0 
+7f75b0000000-7f75b0021000 rw-p 00000000 00:00 0 
+7f75b0021000-7f75b4000000 ---p 00000000 00:00 0 
+7f75b4000000-7f75b4021000 rw-p 00000000 00:00 0 
+7f75b4021000-7f75b8000000 ---p 00000000 00:00 0 
+7f75b8000000-7f75b8021000 rw-p 00000000 00:00 0 
+7f75b8021000-7f75bc000000 ---p 00000000 00:00 0 
+7f75bc000000-7f75bc021000 rw-p 00000000 00:00 0 
+7f75bc021000-7f75c0000000 ---p 00000000 00:00 0 
+7f75c0000000-7f75c0021000 rw-p 00000000 00:00 0 
+7f75c0021000-7f75c4000000 ---p 00000000 00:00 0 
+7f75c8000000-7f75c8021000 rw-p 00000000 00:00 0 
+7f75c8021000-7f75cc000000 ---p 00000000 00:00 0 
+7f75cd45d000-7f75cd460000 ---p 00000000 00:00 0 
+7f75cd460000-7f75cd55e000 rw-p 00000000 00:00 0 
+7f75cd55e000-7f75cd561000 ---p 00000000 00:00 0 
+7f75cd561000-7f75cd6df000 rw-p 00000000 00:00 0 
+7f75cd6df000-7f75cd6e2000 r--p 00000000 08:10 58111                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_multibytecodec.cpython-38-x86_64-linux-gnu.so
+7f75cd6e2000-7f75cd6ea000 r-xp 00003000 08:10 58111                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_multibytecodec.cpython-38-x86_64-linux-gnu.so
+7f75cd6ea000-7f75cd6ec000 r--p 0000b000 08:10 58111                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_multibytecodec.cpython-38-x86_64-linux-gnu.so
+7f75cd6ec000-7f75cd6ed000 ---p 0000d000 08:10 58111                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_multibytecodec.cpython-38-x86_64-linux-gnu.so
+7f75cd6ed000-7f75cd6ee000 r--p 0000d000 08:10 58111                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_multibytecodec.cpython-38-x86_64-linux-gnu.so
+7f75cd6ee000-7f75cd6ef000 rw-p 0000e000 08:10 58111                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_multibytecodec.cpython-38-x86_64-linux-gnu.so
+7f75cd6ef000-7f75cd6f2000 r--p 00000000 08:10 58104                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_codecs_kr.cpython-38-x86_64-linux-gnu.so
+7f75cd6f2000-7f75cd6f4000 r-xp 00003000 08:10 58104                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_codecs_kr.cpython-38-x86_64-linux-gnu.so
+7f75cd6f4000-7f75cd70e000 r--p 00005000 08:10 58104                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_codecs_kr.cpython-38-x86_64-linux-gnu.so
+7f75cd70e000-7f75cd712000 r--p 0001e000 08:10 58104                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_codecs_kr.cpython-38-x86_64-linux-gnu.so
+7f75cd712000-7f75cd713000 rw-p 00022000 08:10 58104                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_codecs_kr.cpython-38-x86_64-linux-gnu.so
+7f75cd713000-7f75cd715000 r--s 00016000 08:10 114705                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar
+7f75cd715000-7f75cd8e6000 rw-p 00000000 00:00 0 
+7f75cd8e6000-7f75cd8f8000 r--s 0034c000 08:10 114716                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar
+7f75cd8f8000-7f75cd938000 rw-p 00000000 00:00 0 
+7f75cd938000-7f75cd93b000 ---p 00000000 00:00 0 
+7f75cd93b000-7f75cda39000 rw-p 00000000 00:00 0 
+7f75cda39000-7f75cda3e000 r--p 00000000 08:10 114662                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f75cda3e000-7f75cda4f000 r-xp 00005000 08:10 114662                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f75cda4f000-7f75cda53000 r--p 00016000 08:10 114662                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f75cda53000-7f75cda54000 r--p 00019000 08:10 114662                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f75cda54000-7f75cda55000 rw-p 0001a000 08:10 114662                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f75cda55000-7f75cda5c000 r--p 00000000 08:10 114663                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f75cda5c000-7f75cda65000 r-xp 00007000 08:10 114663                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f75cda65000-7f75cda68000 r--p 00010000 08:10 114663                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f75cda68000-7f75cda69000 r--p 00012000 08:10 114663                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f75cda69000-7f75cda6a000 rw-p 00013000 08:10 114663                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f75cda6a000-7f75cda6d000 r--s 00017000 08:10 116465                     /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/org.jpype.jar
+7f75cda6d000-7f75cda70000 r--s 0075b000 08:10 116582                     /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/kkma-2.0.jar
+7f75cda70000-7f75cda73000 r--s 0001e000 08:10 116583                     /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/komoran-3.0.jar
+7f75cda73000-7f75cda75000 r--s 0000b000 08:10 116589                     /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/twitter-text-1.14.7.jar
+7f75cda75000-7f75cda7c000 r--s 0003c000 08:10 116588                     /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/snakeyaml-1.12.jar
+7f75cda7c000-7f75cdab3000 r--s 004ca000 08:10 116585                     /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/scala-library-2.12.3.jar
+7f75cdab3000-7f75cdab8000 r--s 001a4000 08:10 116584                     /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/open-korean-text-2.1.0.jar
+7f75cdab8000-7f75cdaba000 r--s 00008000 08:10 116586                     /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/shineware-common-1.0.jar
+7f75cdaba000-7f75cdabc000 r--s 00012000 08:10 116580                     /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/aho-corasick.jar
+7f75cdabc000-7f75cdac0000 r--s 00025000 08:10 116581                     /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/jhannanum-0.8.4.jar
+7f75cdac0000-7f75cdac2000 r--s 00008000 08:10 114690                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
+7f75cdac2000-7f75cdac4000 r--s 00001000 08:10 114685                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
+7f75cdac4000-7f75cdacf000 r--s 00116000 08:10 114688                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
+7f75cdacf000-7f75cdaea000 r--s 001d6000 08:10 114689                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
+7f75cdaea000-7f75cdb05000 r--s 00394000 08:10 114684                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
+7f75cdb05000-7f75cdb07000 r--s 00010000 08:10 114693                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
+7f75cdb07000-7f75cdb0a000 r--s 0000f000 08:10 114686                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+7f75cdb0a000-7f75cdb10000 r--s 0003d000 08:10 114691                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+7f75cdb10000-7f75cdb14000 r--s 00041000 08:10 114692                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+7f75cdb14000-7f75cdb15000 ---p 00000000 00:00 0 
+7f75cdb15000-7f75cdc15000 rw-p 00000000 00:00 0 
+7f75cdc15000-7f75cdc18000 ---p 00000000 00:00 0 
+7f75cdc18000-7f75cdd16000 rw-p 00000000 00:00 0 
+7f75cdd16000-7f75cdd17000 ---p 00000000 00:00 0 
+7f75cdd17000-7f75cdd1a000 ---p 00000000 00:00 0 
+7f75cdd1a000-7f75cde17000 rw-p 00000000 00:00 0 
+7f75cde17000-7f75cde18000 ---p 00000000 00:00 0 
+7f75cde18000-7f75cde1b000 ---p 00000000 00:00 0 
+7f75cde1b000-7f75cdf18000 rw-p 00000000 00:00 0 
+7f75cdf18000-7f75cdf19000 ---p 00000000 00:00 0 
+7f75cdf19000-7f75cdf1c000 ---p 00000000 00:00 0 
+7f75cdf1c000-7f75ce019000 rw-p 00000000 00:00 0 
+7f75ce019000-7f75ce01f000 r--s 000d3000 08:10 114710                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar
+7f75ce01f000-7f75ce022000 ---p 00000000 00:00 0 
+7f75ce022000-7f75ce120000 rw-p 00000000 00:00 0 
+7f75ce120000-7f75ce293000 r--p 00000000 08:10 21551                      /usr/lib/locale/C.UTF-8/LC_COLLATE
+7f75ce293000-7f75ce296000 ---p 00000000 00:00 0 
+7f75ce296000-7f75ce394000 rw-p 00000000 00:00 0 
+7f75ce394000-7f75ce397000 ---p 00000000 00:00 0 
+7f75ce397000-7f75ce495000 rw-p 00000000 00:00 0 
+7f75ce495000-7f75ce496000 ---p 00000000 00:00 0 
+7f75ce496000-7f75ce596000 rw-p 00000000 00:00 0 
+7f75ce596000-7f75ce768000 r--s 03cab000 08:10 114717                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+7f75ce768000-7f75cec68000 rw-p 00000000 00:00 0 
+7f75cec68000-7f75cef68000 ---p 00000000 00:00 0 
+7f75cef68000-7f75d117c000 rw-p 00000000 00:00 0 
+7f75d117c000-7f75d117d000 ---p 00000000 00:00 0 
+7f75d117d000-7f75d127d000 rw-p 00000000 00:00 0 
+7f75d127d000-7f75d127e000 ---p 00000000 00:00 0 
+7f75d127e000-7f75d137e000 rw-p 00000000 00:00 0 
+7f75d137e000-7f75d137f000 ---p 00000000 00:00 0 
+7f75d137f000-7f75d147f000 rw-p 00000000 00:00 0 
+7f75d147f000-7f75d1480000 ---p 00000000 00:00 0 
+7f75d1480000-7f75d15c3000 rw-p 00000000 00:00 0 
+7f75d15c3000-7f75d16d6000 ---p 00000000 00:00 0 
+7f75d16d6000-7f75d1719000 rw-p 00000000 00:00 0 
+7f75d1719000-7f75d182b000 ---p 00000000 00:00 0 
+7f75d182b000-7f75d1899000 rw-p 00000000 00:00 0 
+7f75d1899000-7f75d18d6000 ---p 00000000 00:00 0 
+7f75d18d6000-7f75d18e4000 rw-p 00000000 00:00 0 
+7f75d18e4000-7f75d1c97000 ---p 00000000 00:00 0 
+7f75d1c97000-7f75d1fc7000 rwxp 00000000 00:00 0 
+7f75d1fc7000-7f75e0c97000 ---p 00000000 00:00 0 
+7f75e0c97000-7f75e0c9a000 r--p 00000000 08:10 114670                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f75e0c9a000-7f75e0c9f000 r-xp 00003000 08:10 114670                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f75e0c9f000-7f75e0ca1000 r--p 00008000 08:10 114670                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f75e0ca1000-7f75e0ca2000 r--p 00009000 08:10 114670                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f75e0ca2000-7f75e0ca3000 rw-p 0000a000 08:10 114670                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f75e0ca3000-7f75e0ca6000 r--p 00000000 08:10 40968                      /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7f75e0ca6000-7f75e0cad000 r-xp 00003000 08:10 40968                      /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7f75e0cad000-7f75e0caf000 r--p 0000a000 08:10 40968                      /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7f75e0caf000-7f75e0cb0000 r--p 0000b000 08:10 40968                      /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7f75e0cb0000-7f75e0cb1000 rw-p 0000c000 08:10 40968                      /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7f75e0cb1000-7f75e0cb7000 rw-p 00000000 00:00 0 
+7f75e0cb7000-7f75e0cb8000 r--p 00000000 00:00 0 
+7f75e0cb8000-7f75e0cc0000 rw-s 00000000 08:10 3809                       /tmp/hsperfdata_taemin/475
+7f75e0cc0000-7f75e0ccd000 r--p 00000000 08:10 114651                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f75e0ccd000-7f75e0ce5000 r-xp 0000d000 08:10 114651                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f75e0ce5000-7f75e0cec000 r--p 00025000 08:10 114651                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f75e0cec000-7f75e0ced000 r--p 0002b000 08:10 114651                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f75e0ced000-7f75e0cef000 rw-p 0002c000 08:10 114651                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f75e0cef000-7f75e0cf4000 r--p 00000000 08:10 114669                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f75e0cf4000-7f75e0cfd000 r-xp 00005000 08:10 114669                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f75e0cfd000-7f75e0cff000 r--p 0000e000 08:10 114669                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f75e0cff000-7f75e0d01000 r--p 0000f000 08:10 114669                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f75e0d01000-7f75e0d02000 rw-p 00011000 08:10 114669                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f75e0d02000-7f75e0ef7000 r--p 00000000 08:10 114673                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f75e0ef7000-7f75e1860000 r-xp 001f5000 08:10 114673                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f75e1860000-7f75e1a12000 r--p 00b5e000 08:10 114673                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f75e1a12000-7f75e1aa8000 r--p 00d0f000 08:10 114673                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f75e1aa8000-7f75e1ad1000 rw-p 00da5000 08:10 114673                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f75e1ad1000-7f75e1c04000 rw-p 00000000 00:00 0 
+7f75e1c04000-7f75e1c09000 r--p 00000000 08:10 87144                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/json.cpython-38-x86_64-linux-gnu.so
+7f75e1c09000-7f75e1c15000 r-xp 00005000 08:10 87144                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/json.cpython-38-x86_64-linux-gnu.so
+7f75e1c15000-7f75e1c19000 r--p 00011000 08:10 87144                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/json.cpython-38-x86_64-linux-gnu.so
+7f75e1c19000-7f75e1c1a000 ---p 00015000 08:10 87144                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/json.cpython-38-x86_64-linux-gnu.so
+7f75e1c1a000-7f75e1c1b000 r--p 00015000 08:10 87144                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/json.cpython-38-x86_64-linux-gnu.so
+7f75e1c1b000-7f75e1c1c000 rw-p 00016000 08:10 87144                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/json.cpython-38-x86_64-linux-gnu.so
+7f75e1c1c000-7f75e1c9c000 rw-p 00000000 00:00 0 
+7f75e1c9c000-7f75e1ca7000 r--p 00000000 08:10 87185                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/parsers.cpython-38-x86_64-linux-gnu.so
+7f75e1ca7000-7f75e1d0d000 r-xp 0000b000 08:10 87185                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/parsers.cpython-38-x86_64-linux-gnu.so
+7f75e1d0d000-7f75e1d19000 r--p 00071000 08:10 87185                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/parsers.cpython-38-x86_64-linux-gnu.so
+7f75e1d19000-7f75e1d1a000 ---p 0007d000 08:10 87185                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/parsers.cpython-38-x86_64-linux-gnu.so
+7f75e1d1a000-7f75e1d1b000 r--p 0007d000 08:10 87185                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/parsers.cpython-38-x86_64-linux-gnu.so
+7f75e1d1b000-7f75e1d22000 rw-p 0007e000 08:10 87185                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/parsers.cpython-38-x86_64-linux-gnu.so
+7f75e1d22000-7f75e1d23000 rw-p 00000000 00:00 0 
+7f75e1d23000-7f75e1d25000 r--p 00000000 08:10 58108                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/cmath.cpython-38-x86_64-linux-gnu.so
+7f75e1d25000-7f75e1d31000 r-xp 00002000 08:10 58108                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/cmath.cpython-38-x86_64-linux-gnu.so
+7f75e1d31000-7f75e1d33000 r--p 0000e000 08:10 58108                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/cmath.cpython-38-x86_64-linux-gnu.so
+7f75e1d33000-7f75e1d34000 ---p 00010000 08:10 58108                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/cmath.cpython-38-x86_64-linux-gnu.so
+7f75e1d34000-7f75e1d35000 r--p 00010000 08:10 58108                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/cmath.cpython-38-x86_64-linux-gnu.so
+7f75e1d35000-7f75e1d36000 rw-p 00011000 08:10 58108                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/cmath.cpython-38-x86_64-linux-gnu.so
+7f75e1d36000-7f75e1d38000 rw-p 00000000 00:00 0 
+7f75e1d38000-7f75e1d3c000 r--p 00000000 08:10 87133                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/testing.cpython-38-x86_64-linux-gnu.so
+7f75e1d3c000-7f75e1d4c000 r-xp 00004000 08:10 87133                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/testing.cpython-38-x86_64-linux-gnu.so
+7f75e1d4c000-7f75e1d4e000 r--p 00014000 08:10 87133                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/testing.cpython-38-x86_64-linux-gnu.so
+7f75e1d4e000-7f75e1d4f000 r--p 00015000 08:10 87133                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/testing.cpython-38-x86_64-linux-gnu.so
+7f75e1d4f000-7f75e1d51000 rw-p 00016000 08:10 87133                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/testing.cpython-38-x86_64-linux-gnu.so
+7f75e1d51000-7f75e1e51000 rw-p 00000000 00:00 0 
+7f75e1e51000-7f75e1e5f000 r--p 00000000 08:10 87182                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/groupby.cpython-38-x86_64-linux-gnu.so
+7f75e1e5f000-7f75e1f7a000 r-xp 0000e000 08:10 87182                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/groupby.cpython-38-x86_64-linux-gnu.so
+7f75e1f7a000-7f75e1f92000 r--p 00129000 08:10 87182                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/groupby.cpython-38-x86_64-linux-gnu.so
+7f75e1f92000-7f75e1f93000 r--p 00140000 08:10 87182                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/groupby.cpython-38-x86_64-linux-gnu.so
+7f75e1f93000-7f75e1f9f000 rw-p 00141000 08:10 87182                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/groupby.cpython-38-x86_64-linux-gnu.so
+7f75e1f9f000-7f75e2021000 rw-p 00000000 00:00 0 
+7f75e2021000-7f75e2028000 r--p 00000000 08:10 87179                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/reshape.cpython-38-x86_64-linux-gnu.so
+7f75e2028000-7f75e2057000 r-xp 00007000 08:10 87179                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/reshape.cpython-38-x86_64-linux-gnu.so
+7f75e2057000-7f75e205f000 r--p 00036000 08:10 87179                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/reshape.cpython-38-x86_64-linux-gnu.so
+7f75e205f000-7f75e2060000 r--p 0003d000 08:10 87179                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/reshape.cpython-38-x86_64-linux-gnu.so
+7f75e2060000-7f75e2064000 rw-p 0003e000 08:10 87179                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/reshape.cpython-38-x86_64-linux-gnu.so
+7f75e2064000-7f75e20e5000 rw-p 00000000 00:00 0 
+7f75e20e5000-7f75e20eb000 r--p 00000000 08:10 87234                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/window/indexers.cpython-38-x86_64-linux-gnu.so
+7f75e20eb000-7f75e210a000 r-xp 00006000 08:10 87234                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/window/indexers.cpython-38-x86_64-linux-gnu.so
+7f75e210a000-7f75e2110000 r--p 00025000 08:10 87234                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/window/indexers.cpython-38-x86_64-linux-gnu.so
+7f75e2110000-7f75e2111000 r--p 0002a000 08:10 87234                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/window/indexers.cpython-38-x86_64-linux-gnu.so
+7f75e2111000-7f75e2114000 rw-p 0002b000 08:10 87234                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/window/indexers.cpython-38-x86_64-linux-gnu.so
+7f75e2114000-7f75e2115000 rw-p 00000000 00:00 0 
+7f75e2115000-7f75e211e000 r--p 00000000 08:10 87237                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/window/aggregations.cpython-38-x86_64-linux-gnu.so
+7f75e211e000-7f75e2165000 r-xp 00009000 08:10 87237                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/window/aggregations.cpython-38-x86_64-linux-gnu.so
+7f75e2165000-7f75e216f000 r--p 00050000 08:10 87237                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/window/aggregations.cpython-38-x86_64-linux-gnu.so
+7f75e216f000-7f75e2170000 r--p 00059000 08:10 87237                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/window/aggregations.cpython-38-x86_64-linux-gnu.so
+7f75e2170000-7f75e2176000 rw-p 0005a000 08:10 87237                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/window/aggregations.cpython-38-x86_64-linux-gnu.so
+7f75e2176000-7f75e2237000 rw-p 00000000 00:00 0 
+7f75e2237000-7f75e223e000 r--p 00000000 08:10 87137                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/writers.cpython-38-x86_64-linux-gnu.so
+7f75e223e000-7f75e2263000 r-xp 00007000 08:10 87137                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/writers.cpython-38-x86_64-linux-gnu.so
+7f75e2263000-7f75e226a000 r--p 0002c000 08:10 87137                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/writers.cpython-38-x86_64-linux-gnu.so
+7f75e226a000-7f75e226b000 ---p 00033000 08:10 87137                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/writers.cpython-38-x86_64-linux-gnu.so
+7f75e226b000-7f75e226c000 r--p 00033000 08:10 87137                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/writers.cpython-38-x86_64-linux-gnu.so
+7f75e226c000-7f75e2270000 rw-p 00034000 08:10 87137                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/writers.cpython-38-x86_64-linux-gnu.so
+7f75e2270000-7f75e22b1000 rw-p 00000000 00:00 0 
+7f75e22b1000-7f75e22b9000 r--p 00000000 08:10 87139                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/internals.cpython-38-x86_64-linux-gnu.so
+7f75e22b9000-7f75e22f7000 r-xp 00008000 08:10 87139                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/internals.cpython-38-x86_64-linux-gnu.so
+7f75e22f7000-7f75e2301000 r--p 00046000 08:10 87139                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/internals.cpython-38-x86_64-linux-gnu.so
+7f75e2301000-7f75e2302000 r--p 0004f000 08:10 87139                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/internals.cpython-38-x86_64-linux-gnu.so
+7f75e2302000-7f75e2308000 rw-p 00050000 08:10 87139                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/internals.cpython-38-x86_64-linux-gnu.so
+7f75e2308000-7f75e23c9000 rw-p 00000000 00:00 0 
+7f75e23c9000-7f75e23cc000 r--p 00000000 08:10 87147                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/indexing.cpython-38-x86_64-linux-gnu.so
+7f75e23cc000-7f75e23d2000 r-xp 00003000 08:10 87147                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/indexing.cpython-38-x86_64-linux-gnu.so
+7f75e23d2000-7f75e23d4000 r--p 00009000 08:10 87147                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/indexing.cpython-38-x86_64-linux-gnu.so
+7f75e23d4000-7f75e23d5000 r--p 0000a000 08:10 87147                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/indexing.cpython-38-x86_64-linux-gnu.so
+7f75e23d5000-7f75e23d6000 rw-p 0000b000 08:10 87147                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/indexing.cpython-38-x86_64-linux-gnu.so
+7f75e23d6000-7f75e2516000 rw-p 00000000 00:00 0 
+7f75e2516000-7f75e251f000 r--p 00000000 08:10 87178                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/sparse.cpython-38-x86_64-linux-gnu.so
+7f75e251f000-7f75e25d2000 r-xp 00009000 08:10 87178                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/sparse.cpython-38-x86_64-linux-gnu.so
+7f75e25d2000-7f75e25e0000 r--p 000bc000 08:10 87178                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/sparse.cpython-38-x86_64-linux-gnu.so
+7f75e25e0000-7f75e25e1000 r--p 000c9000 08:10 87178                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/sparse.cpython-38-x86_64-linux-gnu.so
+7f75e25e1000-7f75e25e7000 rw-p 000ca000 08:10 87178                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/sparse.cpython-38-x86_64-linux-gnu.so
+7f75e25e7000-7f75e25e8000 rw-p 00000000 00:00 0 
+7f75e25e8000-7f75e25f7000 r--p 00000000 08:10 87160                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/join.cpython-38-x86_64-linux-gnu.so
+7f75e25f7000-7f75e28b2000 r-xp 0000f000 08:10 87160                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/join.cpython-38-x86_64-linux-gnu.so
+7f75e28b2000-7f75e28d0000 r--p 002ca000 08:10 87160                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/join.cpython-38-x86_64-linux-gnu.so
+7f75e28d0000-7f75e28d1000 ---p 002e8000 08:10 87160                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/join.cpython-38-x86_64-linux-gnu.so
+7f75e28d1000-7f75e28d2000 r--p 002e8000 08:10 87160                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/join.cpython-38-x86_64-linux-gnu.so
+7f75e28d2000-7f75e28db000 rw-p 002e9000 08:10 87160                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/join.cpython-38-x86_64-linux-gnu.so
+7f75e28db000-7f75e291f000 rw-p 00000000 00:00 0 
+7f75e291f000-7f75e2928000 r--p 00000000 08:10 87193                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/index.cpython-38-x86_64-linux-gnu.so
+7f75e2928000-7f75e298a000 r-xp 00009000 08:10 87193                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/index.cpython-38-x86_64-linux-gnu.so
+7f75e298a000-7f75e2997000 r--p 0006b000 08:10 87193                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/index.cpython-38-x86_64-linux-gnu.so
+7f75e2997000-7f75e2998000 r--p 00077000 08:10 87193                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/index.cpython-38-x86_64-linux-gnu.so
+7f75e2998000-7f75e299f000 rw-p 00078000 08:10 87193                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/index.cpython-38-x86_64-linux-gnu.so
+7f75e299f000-7f75e2aa1000 rw-p 00000000 00:00 0 
+7f75e2aa1000-7f75e2aa5000 r--p 00000000 08:10 87168                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/arrays.cpython-38-x86_64-linux-gnu.so
+7f75e2aa5000-7f75e2ab4000 r-xp 00004000 08:10 87168                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/arrays.cpython-38-x86_64-linux-gnu.so
+7f75e2ab4000-7f75e2ab7000 r--p 00013000 08:10 87168                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/arrays.cpython-38-x86_64-linux-gnu.so
+7f75e2ab7000-7f75e2ab8000 ---p 00016000 08:10 87168                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/arrays.cpython-38-x86_64-linux-gnu.so
+7f75e2ab8000-7f75e2ab9000 r--p 00016000 08:10 87168                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/arrays.cpython-38-x86_64-linux-gnu.so
+7f75e2ab9000-7f75e2abb000 rw-p 00017000 08:10 87168                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/arrays.cpython-38-x86_64-linux-gnu.so
+7f75e2abb000-7f75e2b3b000 rw-p 00000000 00:00 0 
+7f75e2b3b000-7f75e2b41000 r--p 00000000 08:10 87157                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/ops.cpython-38-x86_64-linux-gnu.so
+7f75e2b41000-7f75e2b6c000 r-xp 00006000 08:10 87157                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/ops.cpython-38-x86_64-linux-gnu.so
+7f75e2b6c000-7f75e2b73000 r--p 00031000 08:10 87157                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/ops.cpython-38-x86_64-linux-gnu.so
+7f75e2b73000-7f75e2b74000 r--p 00037000 08:10 87157                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/ops.cpython-38-x86_64-linux-gnu.so
+7f75e2b74000-7f75e2b78000 rw-p 00038000 08:10 87157                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/ops.cpython-38-x86_64-linux-gnu.so
+7f75e2b78000-7f75e2e39000 rw-p 00000000 00:00 0 
+7f75e2e39000-7f75e2e47000 r--p 00000000 08:10 87186                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/lib.cpython-38-x86_64-linux-gnu.so
+7f75e2e47000-7f75e2ec4000 r-xp 0000e000 08:10 87186                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/lib.cpython-38-x86_64-linux-gnu.so
+7f75e2ec4000-7f75e2ed6000 r--p 0008b000 08:10 87186                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/lib.cpython-38-x86_64-linux-gnu.so
+7f75e2ed6000-7f75e2ed7000 r--p 0009c000 08:10 87186                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/lib.cpython-38-x86_64-linux-gnu.so
+7f75e2ed7000-7f75e2ee5000 rw-p 0009d000 08:10 87186                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/lib.cpython-38-x86_64-linux-gnu.so
+7f75e2ee5000-7f75e2f27000 rw-p 00000000 00:00 0 
+7f75e2f27000-7f75e2f39000 r--p 00000000 08:10 87138                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/algos.cpython-38-x86_64-linux-gnu.so
+7f75e2f39000-7f75e309d000 r-xp 00012000 08:10 87138                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/algos.cpython-38-x86_64-linux-gnu.so
+7f75e309d000-7f75e30bc000 r--p 00176000 08:10 87138                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/algos.cpython-38-x86_64-linux-gnu.so
+7f75e30bc000-7f75e30bd000 r--p 00194000 08:10 87138                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/algos.cpython-38-x86_64-linux-gnu.so
+7f75e30bd000-7f75e30c9000 rw-p 00195000 08:10 87138                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/algos.cpython-38-x86_64-linux-gnu.so
+7f75e30c9000-7f75e30cc000 rw-p 00000000 00:00 0 
+7f75e30cc000-7f75e30d0000 r--p 00000000 08:10 87183                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/ops_dispatch.cpython-38-x86_64-linux-gnu.so
+7f75e30d0000-7f75e30d7000 r-xp 00004000 08:10 87183                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/ops_dispatch.cpython-38-x86_64-linux-gnu.so
+7f75e30d7000-7f75e30d9000 r--p 0000b000 08:10 87183                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/ops_dispatch.cpython-38-x86_64-linux-gnu.so
+7f75e30d9000-7f75e30da000 r--p 0000c000 08:10 87183                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/ops_dispatch.cpython-38-x86_64-linux-gnu.so
+7f75e30da000-7f75e30dc000 rw-p 0000d000 08:10 87183                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/ops_dispatch.cpython-38-x86_64-linux-gnu.so
+7f75e30dc000-7f75e30e2000 r--p 00000000 08:10 87257                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/vectorized.cpython-38-x86_64-linux-gnu.so
+7f75e30e2000-7f75e310d000 r-xp 00006000 08:10 87257                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/vectorized.cpython-38-x86_64-linux-gnu.so
+7f75e310d000-7f75e3114000 r--p 00031000 08:10 87257                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/vectorized.cpython-38-x86_64-linux-gnu.so
+7f75e3114000-7f75e3115000 ---p 00038000 08:10 87257                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/vectorized.cpython-38-x86_64-linux-gnu.so
+7f75e3115000-7f75e3116000 r--p 00038000 08:10 87257                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/vectorized.cpython-38-x86_64-linux-gnu.so
+7f75e3116000-7f75e311a000 rw-p 00039000 08:10 87257                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/vectorized.cpython-38-x86_64-linux-gnu.so
+7f75e311a000-7f75e3125000 r--p 00000000 08:10 87274                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/period.cpython-38-x86_64-linux-gnu.so
+7f75e3125000-7f75e316d000 r-xp 0000b000 08:10 87274                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/period.cpython-38-x86_64-linux-gnu.so
+7f75e316d000-7f75e3180000 r--p 00053000 08:10 87274                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/period.cpython-38-x86_64-linux-gnu.so
+7f75e3180000-7f75e3181000 r--p 00065000 08:10 87274                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/period.cpython-38-x86_64-linux-gnu.so
+7f75e3181000-7f75e318a000 rw-p 00066000 08:10 87274                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/period.cpython-38-x86_64-linux-gnu.so
+7f75e318a000-7f75e318b000 rw-p 00000000 00:00 0 
+7f75e318b000-7f75e318e000 r--p 00000000 08:10 87192                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/properties.cpython-38-x86_64-linux-gnu.so
+7f75e318e000-7f75e3197000 r-xp 00003000 08:10 87192                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/properties.cpython-38-x86_64-linux-gnu.so
+7f75e3197000-7f75e3199000 r--p 0000c000 08:10 87192                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/properties.cpython-38-x86_64-linux-gnu.so
+7f75e3199000-7f75e319a000 r--p 0000d000 08:10 87192                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/properties.cpython-38-x86_64-linux-gnu.so
+7f75e319a000-7f75e319c000 rw-p 0000e000 08:10 87192                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/properties.cpython-38-x86_64-linux-gnu.so
+7f75e319c000-7f75e31a8000 r--p 00000000 08:10 87268                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/timestamps.cpython-38-x86_64-linux-gnu.so
+7f75e31a8000-7f75e31fc000 r-xp 0000c000 08:10 87268                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/timestamps.cpython-38-x86_64-linux-gnu.so
+7f75e31fc000-7f75e3212000 r--p 00060000 08:10 87268                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/timestamps.cpython-38-x86_64-linux-gnu.so
+7f75e3212000-7f75e3213000 r--p 00075000 08:10 87268                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/timestamps.cpython-38-x86_64-linux-gnu.so
+7f75e3213000-7f75e3220000 rw-p 00076000 08:10 87268                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/timestamps.cpython-38-x86_64-linux-gnu.so
+7f75e3220000-7f75e3262000 rw-p 00000000 00:00 0 
+7f75e3262000-7f75e326c000 r--p 00000000 08:10 87278                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/strptime.cpython-38-x86_64-linux-gnu.so
+7f75e326c000-7f75e32b7000 r-xp 0000a000 08:10 87278                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/strptime.cpython-38-x86_64-linux-gnu.so
+7f75e32b7000-7f75e32c1000 r--p 00055000 08:10 87278                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/strptime.cpython-38-x86_64-linux-gnu.so
+7f75e32c1000-7f75e32c2000 r--p 0005e000 08:10 87278                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/strptime.cpython-38-x86_64-linux-gnu.so
+7f75e32c2000-7f75e32c9000 rw-p 0005f000 08:10 87278                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/strptime.cpython-38-x86_64-linux-gnu.so
+7f75e32c9000-7f75e32ca000 rw-p 00000000 00:00 0 
+7f75e32ca000-7f75e32d2000 r--p 00000000 08:10 87252                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/fields.cpython-38-x86_64-linux-gnu.so
+7f75e32d2000-7f75e330b000 r-xp 00008000 08:10 87252                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/fields.cpython-38-x86_64-linux-gnu.so
+7f75e330b000-7f75e3314000 r--p 00041000 08:10 87252                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/fields.cpython-38-x86_64-linux-gnu.so
+7f75e3314000-7f75e3315000 r--p 00049000 08:10 87252                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/fields.cpython-38-x86_64-linux-gnu.so
+7f75e3315000-7f75e331a000 rw-p 0004a000 08:10 87252                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/fields.cpython-38-x86_64-linux-gnu.so
+7f75e331a000-7f75e331b000 rw-p 00000000 00:00 0 
+7f75e331b000-7f75e3326000 r--p 00000000 08:10 87295                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/timedeltas.cpython-38-x86_64-linux-gnu.so
+7f75e3326000-7f75e337d000 r-xp 0000b000 08:10 87295                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/timedeltas.cpython-38-x86_64-linux-gnu.so
+7f75e337d000-7f75e338c000 r--p 00062000 08:10 87295                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/timedeltas.cpython-38-x86_64-linux-gnu.so
+7f75e338c000-7f75e338d000 r--p 00070000 08:10 87295                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/timedeltas.cpython-38-x86_64-linux-gnu.so
+7f75e338d000-7f75e3395000 rw-p 00071000 08:10 87295                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/timedeltas.cpython-38-x86_64-linux-gnu.so
+7f75e3395000-7f75e33d7000 rw-p 00000000 00:00 0 
+7f75e33d7000-7f75e33e9000 r--p 00000000 08:10 87243                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/offsets.cpython-38-x86_64-linux-gnu.so
+7f75e33e9000-7f75e34b3000 r-xp 00012000 08:10 87243                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/offsets.cpython-38-x86_64-linux-gnu.so
+7f75e34b3000-7f75e34cd000 r--p 000dc000 08:10 87243                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/offsets.cpython-38-x86_64-linux-gnu.so
+7f75e34cd000-7f75e34ce000 r--p 000f5000 08:10 87243                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/offsets.cpython-38-x86_64-linux-gnu.so
+7f75e34ce000-7f75e34e1000 rw-p 000f6000 08:10 87243                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/offsets.cpython-38-x86_64-linux-gnu.so
+7f75e34e1000-7f75e34e4000 rw-p 00000000 00:00 0 
+7f75e34e4000-7f75e34ef000 r--p 00000000 08:10 87251                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/parsing.cpython-38-x86_64-linux-gnu.so
+7f75e34ef000-7f75e3542000 r-xp 0000b000 08:10 87251                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/parsing.cpython-38-x86_64-linux-gnu.so
+7f75e3542000-7f75e354e000 r--p 0005e000 08:10 87251                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/parsing.cpython-38-x86_64-linux-gnu.so
+7f75e354e000-7f75e354f000 r--p 00069000 08:10 87251                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/parsing.cpython-38-x86_64-linux-gnu.so
+7f75e354f000-7f75e3557000 rw-p 0006a000 08:10 87251                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/parsing.cpython-38-x86_64-linux-gnu.so
+7f75e3557000-7f75e3558000 rw-p 00000000 00:00 0 
+7f75e3558000-7f75e355b000 r--p 00000000 08:10 87260                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/ccalendar.cpython-38-x86_64-linux-gnu.so
+7f75e355b000-7f75e3566000 r-xp 00003000 08:10 87260                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/ccalendar.cpython-38-x86_64-linux-gnu.so
+7f75e3566000-7f75e3568000 r--p 0000e000 08:10 87260                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/ccalendar.cpython-38-x86_64-linux-gnu.so
+7f75e3568000-7f75e3569000 r--p 0000f000 08:10 87260                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/ccalendar.cpython-38-x86_64-linux-gnu.so
+7f75e3569000-7f75e356b000 rw-p 00010000 08:10 87260                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/ccalendar.cpython-38-x86_64-linux-gnu.so
+7f75e356b000-7f75e3572000 r--p 00000000 08:10 87273                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/tzconversion.cpython-38-x86_64-linux-gnu.so
+7f75e3572000-7f75e35b0000 r-xp 00007000 08:10 87273                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/tzconversion.cpython-38-x86_64-linux-gnu.so
+7f75e35b0000-7f75e35b8000 r--p 00045000 08:10 87273                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/tzconversion.cpython-38-x86_64-linux-gnu.so
+7f75e35b8000-7f75e35b9000 r--p 0004c000 08:10 87273                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/tzconversion.cpython-38-x86_64-linux-gnu.so
+7f75e35b9000-7f75e35bd000 rw-p 0004d000 08:10 87273                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/tzconversion.cpython-38-x86_64-linux-gnu.so
+7f75e35bd000-7f75e35be000 rw-p 00000000 00:00 0 
+7f75e35be000-7f75e35c5000 r--p 00000000 08:10 87247                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/timezones.cpython-38-x86_64-linux-gnu.so
+7f75e35c5000-7f75e35f1000 r-xp 00007000 08:10 87247                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/timezones.cpython-38-x86_64-linux-gnu.so
+7f75e35f1000-7f75e35f9000 r--p 00033000 08:10 87247                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/timezones.cpython-38-x86_64-linux-gnu.so
+7f75e35f9000-7f75e35fa000 r--p 0003a000 08:10 87247                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/timezones.cpython-38-x86_64-linux-gnu.so
+7f75e35fa000-7f75e35fe000 rw-p 0003b000 08:10 87247                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/timezones.cpython-38-x86_64-linux-gnu.so
+7f75e35fe000-7f75e35ff000 rw-p 00000000 00:00 0 
+7f75e35ff000-7f75e3602000 r--p 00000000 08:10 87258                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/np_datetime.cpython-38-x86_64-linux-gnu.so
+7f75e3602000-7f75e3608000 r-xp 00003000 08:10 87258                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/np_datetime.cpython-38-x86_64-linux-gnu.so
+7f75e3608000-7f75e360a000 r--p 00009000 08:10 87258                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/np_datetime.cpython-38-x86_64-linux-gnu.so
+7f75e360a000-7f75e360b000 r--p 0000a000 08:10 87258                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/np_datetime.cpython-38-x86_64-linux-gnu.so
+7f75e360b000-7f75e360c000 rw-p 0000b000 08:10 87258                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/np_datetime.cpython-38-x86_64-linux-gnu.so
+7f75e360c000-7f75e3613000 r--p 00000000 08:10 87298                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/nattype.cpython-38-x86_64-linux-gnu.so
+7f75e3613000-7f75e362e000 r-xp 00007000 08:10 87298                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/nattype.cpython-38-x86_64-linux-gnu.so
+7f75e362e000-7f75e3639000 r--p 00022000 08:10 87298                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/nattype.cpython-38-x86_64-linux-gnu.so
+7f75e3639000-7f75e363a000 r--p 0002c000 08:10 87298                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/nattype.cpython-38-x86_64-linux-gnu.so
+7f75e363a000-7f75e363f000 rw-p 0002d000 08:10 87298                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/nattype.cpython-38-x86_64-linux-gnu.so
+7f75e363f000-7f75e3640000 rw-p 00000000 00:00 0 
+7f75e3640000-7f75e3648000 r--p 00000000 08:10 87259                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/conversion.cpython-38-x86_64-linux-gnu.so
+7f75e3648000-7f75e367e000 r-xp 00008000 08:10 87259                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/conversion.cpython-38-x86_64-linux-gnu.so
+7f75e367e000-7f75e3687000 r--p 0003e000 08:10 87259                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/conversion.cpython-38-x86_64-linux-gnu.so
+7f75e3687000-7f75e3688000 r--p 00046000 08:10 87259                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/conversion.cpython-38-x86_64-linux-gnu.so
+7f75e3688000-7f75e368c000 rw-p 00047000 08:10 87259                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/conversion.cpython-38-x86_64-linux-gnu.so
+7f75e368c000-7f75e368d000 rw-p 00000000 00:00 0 
+7f75e368d000-7f75e369e000 r--p 00000000 08:10 87175                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/hashtable.cpython-38-x86_64-linux-gnu.so
+7f75e369e000-7f75e37c1000 r-xp 00011000 08:10 87175                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/hashtable.cpython-38-x86_64-linux-gnu.so
+7f75e37c1000-7f75e37e0000 r--p 00134000 08:10 87175                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/hashtable.cpython-38-x86_64-linux-gnu.so
+7f75e37e0000-7f75e37e1000 ---p 00153000 08:10 87175                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/hashtable.cpython-38-x86_64-linux-gnu.so
+7f75e37e1000-7f75e37e2000 r--p 00153000 08:10 87175                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/hashtable.cpython-38-x86_64-linux-gnu.so
+7f75e37e2000-7f75e37fd000 rw-p 00154000 08:10 87175                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/hashtable.cpython-38-x86_64-linux-gnu.so
+7f75e37fd000-7f75e77ff000 rw-p 00000000 00:00 0 
+7f75e77ff000-7f75e7800000 ---p 00000000 00:00 0 
+7f75e7800000-7f75e8000000 rw-p 00000000 00:00 0 
+7f75e8000000-7f75e802b000 rw-p 00000000 00:00 0 
+7f75e802b000-7f75ec000000 ---p 00000000 00:00 0 
+7f75ec000000-7f75ec001000 r--s 00003000 08:10 116587                     /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/shineware-ds-1.0.jar
+7f75ec001000-7f75ec004000 r--p 00000000 08:10 87254                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/base.cpython-38-x86_64-linux-gnu.so
+7f75ec004000-7f75ec009000 r-xp 00003000 08:10 87254                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/base.cpython-38-x86_64-linux-gnu.so
+7f75ec009000-7f75ec00b000 r--p 00008000 08:10 87254                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/base.cpython-38-x86_64-linux-gnu.so
+7f75ec00b000-7f75ec00c000 r--p 00009000 08:10 87254                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/base.cpython-38-x86_64-linux-gnu.so
+7f75ec00c000-7f75ec00d000 rw-p 0000a000 08:10 87254                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/base.cpython-38-x86_64-linux-gnu.so
+7f75ec00d000-7f75ec04d000 rw-p 00000000 00:00 0 
+7f75ec04d000-7f75ec05c000 r--p 00000000 08:10 87136                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/interval.cpython-38-x86_64-linux-gnu.so
+7f75ec05c000-7f75ec168000 r-xp 0000f000 08:10 87136                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/interval.cpython-38-x86_64-linux-gnu.so
+7f75ec168000-7f75ec188000 r--p 0011b000 08:10 87136                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/interval.cpython-38-x86_64-linux-gnu.so
+7f75ec188000-7f75ec189000 r--p 0013a000 08:10 87136                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/interval.cpython-38-x86_64-linux-gnu.so
+7f75ec189000-7f75ec195000 rw-p 0013b000 08:10 87136                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/interval.cpython-38-x86_64-linux-gnu.so
+7f75ec195000-7f75ee196000 rw-p 00000000 00:00 0 
+7f75ee196000-7f75ee29e000 r--p 00000000 08:10 85712                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy.libs/libopenblas64_p-r0-2f7c42d4.3.18.so
+7f75ee29e000-7f75efd3e000 r-xp 00108000 08:10 85712                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy.libs/libopenblas64_p-r0-2f7c42d4.3.18.so
+7f75efd3e000-7f75eff32000 r--p 01ba8000 08:10 85712                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy.libs/libopenblas64_p-r0-2f7c42d4.3.18.so
+7f75eff32000-7f75eff38000 r--p 01d9b000 08:10 85712                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy.libs/libopenblas64_p-r0-2f7c42d4.3.18.so
+7f75eff38000-7f75eff51000 rw-p 01da1000 08:10 85712                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy.libs/libopenblas64_p-r0-2f7c42d4.3.18.so
+7f75eff51000-7f75eff5e000 rw-p 00000000 00:00 0 
+7f75eff5e000-7f75f0000000 rw-p 01ebc000 08:10 85712                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy.libs/libopenblas64_p-r0-2f7c42d4.3.18.so
+7f75f0000000-7f75f0021000 rw-p 00000000 00:00 0 
+7f75f0021000-7f75f4000000 ---p 00000000 00:00 0 
+7f75f4000000-7f75f4021000 rw-p 00000000 00:00 0 
+7f75f4021000-7f75f8000000 ---p 00000000 00:00 0 
+7f75f8000000-7f75f8006000 r--p 00000000 08:10 87282                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/dtypes.cpython-38-x86_64-linux-gnu.so
+7f75f8006000-7f75f8018000 r-xp 00006000 08:10 87282                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/dtypes.cpython-38-x86_64-linux-gnu.so
+7f75f8018000-7f75f801c000 r--p 00018000 08:10 87282                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/dtypes.cpython-38-x86_64-linux-gnu.so
+7f75f801c000-7f75f801d000 r--p 0001b000 08:10 87282                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/dtypes.cpython-38-x86_64-linux-gnu.so
+7f75f801d000-7f75f8020000 rw-p 0001c000 08:10 87282                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslibs/dtypes.cpython-38-x86_64-linux-gnu.so
+7f75f8020000-7f75f8021000 rw-p 00000000 00:00 0 
+7f75f8021000-7f75f8028000 r--p 00000000 08:10 87156                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/missing.cpython-38-x86_64-linux-gnu.so
+7f75f8028000-7f75f8047000 r-xp 00007000 08:10 87156                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/missing.cpython-38-x86_64-linux-gnu.so
+7f75f8047000-7f75f804d000 r--p 00026000 08:10 87156                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/missing.cpython-38-x86_64-linux-gnu.so
+7f75f804d000-7f75f804e000 r--p 0002b000 08:10 87156                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/missing.cpython-38-x86_64-linux-gnu.so
+7f75f804e000-7f75f8052000 rw-p 0002c000 08:10 87156                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/missing.cpython-38-x86_64-linux-gnu.so
+7f75f8052000-7f75f8113000 rw-p 00000000 00:00 0 
+7f75f8113000-7f75f8123000 r--p 00000000 08:10 85749                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_generator.cpython-38-x86_64-linux-gnu.so
+7f75f8123000-7f75f8199000 r-xp 00010000 08:10 85749                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_generator.cpython-38-x86_64-linux-gnu.so
+7f75f8199000-7f75f81cb000 r--p 00086000 08:10 85749                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_generator.cpython-38-x86_64-linux-gnu.so
+7f75f81cb000-7f75f81cc000 r--p 000b7000 08:10 85749                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_generator.cpython-38-x86_64-linux-gnu.so
+7f75f81cc000-7f75f81f3000 rw-p 000b8000 08:10 85749                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_generator.cpython-38-x86_64-linux-gnu.so
+7f75f81f3000-7f75f81f4000 rw-p 00000000 00:00 0 
+7f75f81f4000-7f75f81f7000 r--p 00000000 08:10 85734                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_sfc64.cpython-38-x86_64-linux-gnu.so
+7f75f81f7000-7f75f81fe000 r-xp 00003000 08:10 85734                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_sfc64.cpython-38-x86_64-linux-gnu.so
+7f75f81fe000-7f75f8200000 r--p 0000a000 08:10 85734                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_sfc64.cpython-38-x86_64-linux-gnu.so
+7f75f8200000-7f75f8201000 ---p 0000c000 08:10 85734                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_sfc64.cpython-38-x86_64-linux-gnu.so
+7f75f8201000-7f75f8202000 r--p 0000c000 08:10 85734                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_sfc64.cpython-38-x86_64-linux-gnu.so
+7f75f8202000-7f75f8203000 rw-p 0000d000 08:10 85734                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_sfc64.cpython-38-x86_64-linux-gnu.so
+7f75f8203000-7f75f8207000 r--p 00000000 08:10 85742                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_pcg64.cpython-38-x86_64-linux-gnu.so
+7f75f8207000-7f75f8217000 r-xp 00004000 08:10 85742                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_pcg64.cpython-38-x86_64-linux-gnu.so
+7f75f8217000-7f75f821b000 r--p 00014000 08:10 85742                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_pcg64.cpython-38-x86_64-linux-gnu.so
+7f75f821b000-7f75f821c000 r--p 00017000 08:10 85742                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_pcg64.cpython-38-x86_64-linux-gnu.so
+7f75f821c000-7f75f821f000 rw-p 00018000 08:10 85742                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_pcg64.cpython-38-x86_64-linux-gnu.so
+7f75f821f000-7f75f8222000 r--p 00000000 08:10 85744                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_philox.cpython-38-x86_64-linux-gnu.so
+7f75f8222000-7f75f822f000 r-xp 00003000 08:10 85744                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_philox.cpython-38-x86_64-linux-gnu.so
+7f75f822f000-7f75f8233000 r--p 00010000 08:10 85744                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_philox.cpython-38-x86_64-linux-gnu.so
+7f75f8233000-7f75f8234000 r--p 00013000 08:10 85744                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_philox.cpython-38-x86_64-linux-gnu.so
+7f75f8234000-7f75f8236000 rw-p 00014000 08:10 85744                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_philox.cpython-38-x86_64-linux-gnu.so
+7f75f8236000-7f75f823a000 r--p 00000000 08:10 85754                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_mt19937.cpython-38-x86_64-linux-gnu.so
+7f75f823a000-7f75f8249000 r-xp 00004000 08:10 85754                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_mt19937.cpython-38-x86_64-linux-gnu.so
+7f75f8249000-7f75f824e000 r--p 00013000 08:10 85754                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_mt19937.cpython-38-x86_64-linux-gnu.so
+7f75f824e000-7f75f824f000 r--p 00017000 08:10 85754                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_mt19937.cpython-38-x86_64-linux-gnu.so
+7f75f824f000-7f75f8251000 rw-p 00018000 08:10 85754                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_mt19937.cpython-38-x86_64-linux-gnu.so
+7f75f8251000-7f75f8259000 r--p 00000000 08:10 85752                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_bounded_integers.cpython-38-x86_64-linux-gnu.so
+7f75f8259000-7f75f82a5000 r-xp 00008000 08:10 85752                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_bounded_integers.cpython-38-x86_64-linux-gnu.so
+7f75f82a5000-7f75f82af000 r--p 00054000 08:10 85752                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_bounded_integers.cpython-38-x86_64-linux-gnu.so
+7f75f82af000-7f75f82b0000 r--p 0005d000 08:10 85752                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_bounded_integers.cpython-38-x86_64-linux-gnu.so
+7f75f82b0000-7f75f82b2000 rw-p 0005e000 08:10 85752                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_bounded_integers.cpython-38-x86_64-linux-gnu.so
+7f75f82b2000-7f75f82b3000 rw-p 00000000 00:00 0 
+7f75f82b3000-7f75f82b8000 r--p 00000000 08:10 85737                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_common.cpython-38-x86_64-linux-gnu.so
+7f75f82b8000-7f75f82f0000 r-xp 00005000 08:10 85737                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_common.cpython-38-x86_64-linux-gnu.so
+7f75f82f0000-7f75f82f4000 r--p 0003d000 08:10 85737                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_common.cpython-38-x86_64-linux-gnu.so
+7f75f82f4000-7f75f82f5000 r--p 00040000 08:10 85737                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_common.cpython-38-x86_64-linux-gnu.so
+7f75f82f5000-7f75f82f7000 rw-p 00041000 08:10 85737                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/_common.cpython-38-x86_64-linux-gnu.so
+7f75f82f7000-7f75f82f8000 rw-p 00000000 00:00 0 
+7f75f82f8000-7f75f82fe000 r--p 00000000 08:10 85751                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/bit_generator.cpython-38-x86_64-linux-gnu.so
+7f75f82fe000-7f75f8319000 r-xp 00006000 08:10 85751                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/bit_generator.cpython-38-x86_64-linux-gnu.so
+7f75f8319000-7f75f8321000 r--p 00021000 08:10 85751                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/bit_generator.cpython-38-x86_64-linux-gnu.so
+7f75f8321000-7f75f8322000 r--p 00028000 08:10 85751                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/bit_generator.cpython-38-x86_64-linux-gnu.so
+7f75f8322000-7f75f8327000 rw-p 00029000 08:10 85751                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/bit_generator.cpython-38-x86_64-linux-gnu.so
+7f75f8327000-7f75f8367000 rw-p 00000000 00:00 0 
+7f75f8367000-7f75f8376000 r--p 00000000 08:10 85756                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/mtrand.cpython-38-x86_64-linux-gnu.so
+7f75f8376000-7f75f83c5000 r-xp 0000f000 08:10 85756                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/mtrand.cpython-38-x86_64-linux-gnu.so
+7f75f83c5000-7f75f83f3000 r--p 0005e000 08:10 85756                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/mtrand.cpython-38-x86_64-linux-gnu.so
+7f75f83f3000-7f75f83f4000 r--p 0008b000 08:10 85756                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/mtrand.cpython-38-x86_64-linux-gnu.so
+7f75f83f4000-7f75f841b000 rw-p 0008c000 08:10 85756                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/random/mtrand.cpython-38-x86_64-linux-gnu.so
+7f75f841b000-7f75f845c000 rw-p 00000000 00:00 0 
+7f75f845c000-7f75f845d000 r--p 00000000 08:10 86204                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/fft/_pocketfft_internal.cpython-38-x86_64-linux-gnu.so
+7f75f845d000-7f75f8470000 r-xp 00001000 08:10 86204                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/fft/_pocketfft_internal.cpython-38-x86_64-linux-gnu.so
+7f75f8470000-7f75f8472000 r--p 00014000 08:10 86204                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/fft/_pocketfft_internal.cpython-38-x86_64-linux-gnu.so
+7f75f8472000-7f75f8473000 r--p 00015000 08:10 86204                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/fft/_pocketfft_internal.cpython-38-x86_64-linux-gnu.so
+7f75f8473000-7f75f8474000 rw-p 00016000 08:10 86204                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/fft/_pocketfft_internal.cpython-38-x86_64-linux-gnu.so
+7f75f8474000-7f75f8534000 rw-p 00000000 00:00 0 
+7f75f8534000-7f75f853c000 r--p 00000000 08:10 86173                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/linalg/_umath_linalg.cpython-38-x86_64-linux-gnu.so
+7f75f853c000-7f75f855e000 r-xp 00008000 08:10 86173                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/linalg/_umath_linalg.cpython-38-x86_64-linux-gnu.so
+7f75f855e000-7f75f8564000 r--p 0002a000 08:10 86173                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/linalg/_umath_linalg.cpython-38-x86_64-linux-gnu.so
+7f75f8564000-7f75f8565000 r--p 0002f000 08:10 86173                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/linalg/_umath_linalg.cpython-38-x86_64-linux-gnu.so
+7f75f8565000-7f75f8567000 rw-p 00030000 08:10 86173                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/linalg/_umath_linalg.cpython-38-x86_64-linux-gnu.so
+7f75f8567000-7f75f856b000 rw-p 00037000 08:10 86173                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/linalg/_umath_linalg.cpython-38-x86_64-linux-gnu.so
+7f75f856b000-7f75f86eb000 rw-p 00000000 00:00 0 
+7f75f86eb000-7f75f86ec000 ---p 00000000 00:00 0 
+7f75f86ec000-7f75f8eec000 rw-p 00000000 00:00 0 
+7f75f8eec000-7f75f8eed000 ---p 00000000 00:00 0 
+7f75f8eed000-7f75f96ed000 rw-p 00000000 00:00 0 
+7f75f96ed000-7f75f9728000 r-xp 00000000 08:10 85711                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy.libs/libquadmath-96973f99.so.0.0.0
+7f75f9728000-7f75f9927000 ---p 0003b000 08:10 85711                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy.libs/libquadmath-96973f99.so.0.0.0
+7f75f9927000-7f75f9928000 r--p 0003a000 08:10 85711                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy.libs/libquadmath-96973f99.so.0.0.0
+7f75f9928000-7f75f992a000 rw-p 0003b000 08:10 85711                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy.libs/libquadmath-96973f99.so.0.0.0
+7f75f992a000-7f75f9ba0000 r-xp 00000000 08:10 85710                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy.libs/libgfortran-040039e1.so.5.0.0
+7f75f9ba0000-7f75f9d9f000 ---p 00276000 08:10 85710                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy.libs/libgfortran-040039e1.so.5.0.0
+7f75f9d9f000-7f75f9da0000 r--p 00275000 08:10 85710                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy.libs/libgfortran-040039e1.so.5.0.0
+7f75f9da0000-7f75f9da2000 rw-p 00276000 08:10 85710                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy.libs/libgfortran-040039e1.so.5.0.0
+7f75f9da2000-7f75f9db7000 rw-p 0027b000 08:10 85710                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy.libs/libgfortran-040039e1.so.5.0.0
+7f75f9db7000-7f75f9ddf000 r--p 00000000 08:10 85945                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/core/_multiarray_umath.cpython-38-x86_64-linux-gnu.so
+7f75f9ddf000-7f75fa14b000 r-xp 00028000 08:10 85945                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/core/_multiarray_umath.cpython-38-x86_64-linux-gnu.so
+7f75fa14b000-7f75fa24c000 r--p 00394000 08:10 85945                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/core/_multiarray_umath.cpython-38-x86_64-linux-gnu.so
+7f75fa24c000-7f75fa24e000 r--p 00494000 08:10 85945                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/core/_multiarray_umath.cpython-38-x86_64-linux-gnu.so
+7f75fa24e000-7f75fa270000 rw-p 00496000 08:10 85945                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/core/_multiarray_umath.cpython-38-x86_64-linux-gnu.so
+7f75fa270000-7f75fa290000 rw-p 00000000 00:00 0 
+7f75fa290000-7f75fa297000 rw-p 0050b000 08:10 85945                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/core/_multiarray_umath.cpython-38-x86_64-linux-gnu.so
+7f75fa297000-7f75fa317000 rw-p 00000000 00:00 0 
+7f75fa317000-7f75fa3b7000 r-xp 00000000 08:10 116273                     /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/_jpype.cpython-38-x86_64-linux-gnu.so
+7f75fa3b7000-7f75fa5b6000 ---p 000a0000 08:10 116273                     /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/_jpype.cpython-38-x86_64-linux-gnu.so
+7f75fa5b6000-7f75fa5be000 rw-p 0009f000 08:10 116273                     /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/_jpype.cpython-38-x86_64-linux-gnu.so
+7f75fa5be000-7f75fadfe000 rw-p 00000000 00:00 0 
+7f75fadfe000-7f75faffe000 rw-p 00000000 00:00 0 
+7f75faffe000-7f75fafff000 ---p 00000000 00:00 0 
+7f75fafff000-7f75fb7ff000 rw-p 00000000 00:00 0 
+7f75fb7ff000-7f75fb800000 ---p 00000000 00:00 0 
+7f75fb800000-7f75fc000000 rw-p 00000000 00:00 0 
+7f75fc000000-7f75fc021000 rw-p 00000000 00:00 0 
+7f75fc021000-7f7600000000 ---p 00000000 00:00 0 
+7f7600000000-7f7600021000 rw-p 00000000 00:00 0 
+7f7600021000-7f7604000000 ---p 00000000 00:00 0 
+7f7604000000-7f7604021000 rw-p 00000000 00:00 0 
+7f7604021000-7f7608000000 ---p 00000000 00:00 0 
+7f7608000000-7f7608021000 rw-p 00000000 00:00 0 
+7f7608021000-7f760c000000 ---p 00000000 00:00 0 
+7f760c000000-7f760c05f000 rw-p 00000000 00:00 0 
+7f760c05f000-7f7610000000 ---p 00000000 00:00 0 
+7f7610000000-7f7610002000 r--s 0000c000 08:10 114916                     /usr/share/java/java-atk-wrapper.jar
+7f7610002000-7f761000a000 r--p 00000000 08:10 85933                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/core/_multiarray_tests.cpython-38-x86_64-linux-gnu.so
+7f761000a000-7f7610021000 r-xp 00008000 08:10 85933                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/core/_multiarray_tests.cpython-38-x86_64-linux-gnu.so
+7f7610021000-7f7610027000 r--p 0001f000 08:10 85933                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/core/_multiarray_tests.cpython-38-x86_64-linux-gnu.so
+7f7610027000-7f7610028000 ---p 00025000 08:10 85933                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/core/_multiarray_tests.cpython-38-x86_64-linux-gnu.so
+7f7610028000-7f7610029000 r--p 00025000 08:10 85933                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/core/_multiarray_tests.cpython-38-x86_64-linux-gnu.so
+7f7610029000-7f761002b000 rw-p 00026000 08:10 85933                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/core/_multiarray_tests.cpython-38-x86_64-linux-gnu.so
+7f761002b000-7f76101ab000 rw-p 00000000 00:00 0 
+7f76101ab000-7f76101ac000 ---p 00000000 00:00 0 
+7f76101ac000-7f76109ac000 rw-p 00000000 00:00 0 
+7f76109ac000-7f76109ad000 ---p 00000000 00:00 0 
+7f76109ad000-7f76111ad000 rw-p 00000000 00:00 0 
+7f76111ad000-7f76111ae000 ---p 00000000 00:00 0 
+7f76111ae000-7f76119ae000 rw-p 00000000 00:00 0 
+7f76119ae000-7f76119af000 ---p 00000000 00:00 0 
+7f76119af000-7f76121af000 rw-p 00000000 00:00 0 
+7f76121af000-7f76121b0000 ---p 00000000 00:00 0 
+7f76121b0000-7f76129b0000 rw-p 00000000 00:00 0 
+7f76129b0000-7f76129b1000 ---p 00000000 00:00 0 
+7f76129b1000-7f76131b1000 rw-p 00000000 00:00 0 
+7f76131b1000-7f76131b2000 ---p 00000000 00:00 0 
+7f76131b2000-7f76139b2000 rw-p 00000000 00:00 0 
+7f76139b2000-7f76139b3000 ---p 00000000 00:00 0 
+7f76139b3000-7f76144f3000 rw-p 00000000 00:00 0 
+7f76144f3000-7f76144fc000 r--p 00000000 08:10 74933                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_cython.cpython-38-x86_64-linux-gnu.so
+7f76144fc000-7f7614565000 r-xp 00009000 08:10 74933                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_cython.cpython-38-x86_64-linux-gnu.so
+7f7614565000-7f761456e000 r--p 00072000 08:10 74933                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_cython.cpython-38-x86_64-linux-gnu.so
+7f761456e000-7f761456f000 r--p 0007a000 08:10 74933                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_cython.cpython-38-x86_64-linux-gnu.so
+7f761456f000-7f7614574000 rw-p 0007b000 08:10 74933                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_cython.cpython-38-x86_64-linux-gnu.so
+7f7614574000-7f7614835000 rw-p 00000000 00:00 0 
+7f7614835000-7f761483c000 r--p 00000000 08:10 58130                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/pyexpat.cpython-38-x86_64-linux-gnu.so
+7f761483c000-7f7614869000 r-xp 00007000 08:10 58130                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/pyexpat.cpython-38-x86_64-linux-gnu.so
+7f7614869000-7f7614875000 r--p 00034000 08:10 58130                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/pyexpat.cpython-38-x86_64-linux-gnu.so
+7f7614875000-7f7614878000 r--p 0003f000 08:10 58130                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/pyexpat.cpython-38-x86_64-linux-gnu.so
+7f7614878000-7f761487a000 rw-p 00042000 08:10 58130                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/pyexpat.cpython-38-x86_64-linux-gnu.so
+7f761487a000-7f761493a000 rw-p 00000000 00:00 0 
+7f761493a000-7f761493c000 r--p 00000000 08:10 80330                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/psutil/_psutil_posix.cpython-38-x86_64-linux-gnu.so
+7f761493c000-7f761493e000 r-xp 00002000 08:10 80330                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/psutil/_psutil_posix.cpython-38-x86_64-linux-gnu.so
+7f761493e000-7f761493f000 r--p 00004000 08:10 80330                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/psutil/_psutil_posix.cpython-38-x86_64-linux-gnu.so
+7f761493f000-7f7614940000 r--p 00004000 08:10 80330                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/psutil/_psutil_posix.cpython-38-x86_64-linux-gnu.so
+7f7614940000-7f7614941000 rw-p 00005000 08:10 80330                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/psutil/_psutil_posix.cpython-38-x86_64-linux-gnu.so
+7f7614941000-7f7614e81000 rw-p 00000000 00:00 0 
+7f7614e81000-7f7614e84000 r--p 00000000 08:10 58131                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/unicodedata.cpython-38-x86_64-linux-gnu.so
+7f7614e84000-7f7614e8a000 r-xp 00003000 08:10 58131                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/unicodedata.cpython-38-x86_64-linux-gnu.so
+7f7614e8a000-7f7614f8c000 r--p 00009000 08:10 58131                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/unicodedata.cpython-38-x86_64-linux-gnu.so
+7f7614f8c000-7f7614f8d000 r--p 0010a000 08:10 58131                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/unicodedata.cpython-38-x86_64-linux-gnu.so
+7f7614f8d000-7f7614f8e000 rw-p 0010b000 08:10 58131                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/unicodedata.cpython-38-x86_64-linux-gnu.so
+7f7614f8e000-7f761538e000 rw-p 00000000 00:00 0 
+7f761538e000-7f76153a0000 r--p 00000000 08:10 56970                      /home/taemin/apps/miniconda3/envs/py38/lib/libsqlite3.so.0.8.6
+7f76153a0000-7f7615487000 r-xp 00012000 08:10 56970                      /home/taemin/apps/miniconda3/envs/py38/lib/libsqlite3.so.0.8.6
+7f7615487000-7f76154ba000 r--p 000f9000 08:10 56970                      /home/taemin/apps/miniconda3/envs/py38/lib/libsqlite3.so.0.8.6
+7f76154ba000-7f76154bb000 ---p 0012c000 08:10 56970                      /home/taemin/apps/miniconda3/envs/py38/lib/libsqlite3.so.0.8.6
+7f76154bb000-7f76154bf000 r--p 0012c000 08:10 56970                      /home/taemin/apps/miniconda3/envs/py38/lib/libsqlite3.so.0.8.6
+7f76154bf000-7f76154c3000 rw-p 00130000 08:10 56970                      /home/taemin/apps/miniconda3/envs/py38/lib/libsqlite3.so.0.8.6
+7f76154c3000-7f76154cb000 r--p 00000000 08:10 58119                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sqlite3.cpython-38-x86_64-linux-gnu.so
+7f76154cb000-7f76154d6000 r-xp 00008000 08:10 58119                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sqlite3.cpython-38-x86_64-linux-gnu.so
+7f76154d6000-7f76154da000 r--p 00013000 08:10 58119                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sqlite3.cpython-38-x86_64-linux-gnu.so
+7f76154da000-7f76154db000 ---p 00017000 08:10 58119                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sqlite3.cpython-38-x86_64-linux-gnu.so
+7f76154db000-7f76154dc000 r--p 00017000 08:10 58119                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sqlite3.cpython-38-x86_64-linux-gnu.so
+7f76154dc000-7f76154de000 rw-p 00018000 08:10 58119                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sqlite3.cpython-38-x86_64-linux-gnu.so
+7f76154de000-7f76154e0000 r--p 00000000 08:10 58089                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/mmap.cpython-38-x86_64-linux-gnu.so
+7f76154e0000-7f76154e3000 r-xp 00002000 08:10 58089                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/mmap.cpython-38-x86_64-linux-gnu.so
+7f76154e3000-7f76154e5000 r--p 00005000 08:10 58089                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/mmap.cpython-38-x86_64-linux-gnu.so
+7f76154e5000-7f76154e6000 r--p 00006000 08:10 58089                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/mmap.cpython-38-x86_64-linux-gnu.so
+7f76154e6000-7f76154e7000 rw-p 00007000 08:10 58089                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/mmap.cpython-38-x86_64-linux-gnu.so
+7f76154e7000-7f76154ea000 r--p 00000000 08:10 87196                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/reduction.cpython-38-x86_64-linux-gnu.so
+7f76154ea000-7f76154ed000 r-xp 00003000 08:10 87196                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/reduction.cpython-38-x86_64-linux-gnu.so
+7f76154ed000-7f76154ee000 r--p 00006000 08:10 87196                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/reduction.cpython-38-x86_64-linux-gnu.so
+7f76154ee000-7f76154ef000 ---p 00007000 08:10 87196                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/reduction.cpython-38-x86_64-linux-gnu.so
+7f76154ef000-7f76154f0000 r--p 00007000 08:10 87196                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/reduction.cpython-38-x86_64-linux-gnu.so
+7f76154f0000-7f76154f1000 rw-p 00008000 08:10 87196                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/reduction.cpython-38-x86_64-linux-gnu.so
+7f76154f1000-7f76154f3000 r--p 00000000 08:10 58099                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_csv.cpython-38-x86_64-linux-gnu.so
+7f76154f3000-7f76154f7000 r-xp 00002000 08:10 58099                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_csv.cpython-38-x86_64-linux-gnu.so
+7f76154f7000-7f76154fa000 r--p 00006000 08:10 58099                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_csv.cpython-38-x86_64-linux-gnu.so
+7f76154fa000-7f76154fb000 r--p 00008000 08:10 58099                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_csv.cpython-38-x86_64-linux-gnu.so
+7f76154fb000-7f76154fc000 rw-p 00009000 08:10 58099                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_csv.cpython-38-x86_64-linux-gnu.so
+7f76154fc000-7f76155bc000 rw-p 00000000 00:00 0 
+7f76155bc000-7f76155c2000 r--p 00000000 08:10 87170                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/hashing.cpython-38-x86_64-linux-gnu.so
+7f76155c2000-7f76155e2000 r-xp 00006000 08:10 87170                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/hashing.cpython-38-x86_64-linux-gnu.so
+7f76155e2000-7f76155e8000 r--p 00026000 08:10 87170                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/hashing.cpython-38-x86_64-linux-gnu.so
+7f76155e8000-7f76155e9000 ---p 0002c000 08:10 87170                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/hashing.cpython-38-x86_64-linux-gnu.so
+7f76155e9000-7f76155ea000 r--p 0002c000 08:10 87170                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/hashing.cpython-38-x86_64-linux-gnu.so
+7f76155ea000-7f76155ed000 rw-p 0002d000 08:10 87170                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/hashing.cpython-38-x86_64-linux-gnu.so
+7f76155ed000-7f76155ee000 rw-p 00000000 00:00 0 
+7f76155ee000-7f76155f3000 r--p 00000000 08:10 87140                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslib.cpython-38-x86_64-linux-gnu.so
+7f76155f3000-7f7615615000 r-xp 00005000 08:10 87140                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslib.cpython-38-x86_64-linux-gnu.so
+7f7615615000-7f7615619000 r--p 00027000 08:10 87140                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslib.cpython-38-x86_64-linux-gnu.so
+7f7615619000-7f761561a000 ---p 0002b000 08:10 87140                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslib.cpython-38-x86_64-linux-gnu.so
+7f761561a000-7f761561b000 r--p 0002b000 08:10 87140                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslib.cpython-38-x86_64-linux-gnu.so
+7f761561b000-7f761561e000 rw-p 0002c000 08:10 87140                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/_libs/tslib.cpython-38-x86_64-linux-gnu.so
+7f761561e000-7f761579f000 rw-p 00000000 00:00 0 
+7f761579f000-7f76157a1000 r--p 00000000 08:10 58072                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/resource.cpython-38-x86_64-linux-gnu.so
+7f76157a1000-7f76157a2000 r-xp 00002000 08:10 58072                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/resource.cpython-38-x86_64-linux-gnu.so
+7f76157a2000-7f76157a3000 r--p 00003000 08:10 58072                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/resource.cpython-38-x86_64-linux-gnu.so
+7f76157a3000-7f76157a4000 r--p 00003000 08:10 58072                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/resource.cpython-38-x86_64-linux-gnu.so
+7f76157a4000-7f76157a5000 rw-p 00004000 08:10 58072                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/resource.cpython-38-x86_64-linux-gnu.so
+7f76157a5000-7f76157a7000 r--p 00000000 08:10 58083                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/fcntl.cpython-38-x86_64-linux-gnu.so
+7f76157a7000-7f76157a9000 r-xp 00002000 08:10 58083                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/fcntl.cpython-38-x86_64-linux-gnu.so
+7f76157a9000-7f76157ab000 r--p 00004000 08:10 58083                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/fcntl.cpython-38-x86_64-linux-gnu.so
+7f76157ab000-7f76157ac000 r--p 00005000 08:10 58083                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/fcntl.cpython-38-x86_64-linux-gnu.so
+7f76157ac000-7f76157ad000 rw-p 00006000 08:10 58083                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/fcntl.cpython-38-x86_64-linux-gnu.so
+7f76157ad000-7f7615a6d000 rw-p 00000000 00:00 0 
+7f7615a6d000-7f7615a70000 r--p 00000000 08:10 58078                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/termios.cpython-38-x86_64-linux-gnu.so
+7f7615a70000-7f7615a71000 r-xp 00003000 08:10 58078                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/termios.cpython-38-x86_64-linux-gnu.so
+7f7615a71000-7f7615a73000 r--p 00004000 08:10 58078                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/termios.cpython-38-x86_64-linux-gnu.so
+7f7615a73000-7f7615a74000 r--p 00005000 08:10 58078                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/termios.cpython-38-x86_64-linux-gnu.so
+7f7615a74000-7f7615a76000 rw-p 00006000 08:10 58078                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/termios.cpython-38-x86_64-linux-gnu.so
+7f7615a76000-7f7615ab6000 rw-p 00000000 00:00 0 
+7f7615ab6000-7f7615abd000 r--p 00000000 08:10 58132                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_decimal.cpython-38-x86_64-linux-gnu.so
+7f7615abd000-7f7615af1000 r-xp 00007000 08:10 58132                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_decimal.cpython-38-x86_64-linux-gnu.so
+7f7615af1000-7f7615b01000 r--p 0003b000 08:10 58132                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_decimal.cpython-38-x86_64-linux-gnu.so
+7f7615b01000-7f7615b02000 r--p 0004a000 08:10 58132                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_decimal.cpython-38-x86_64-linux-gnu.so
+7f7615b02000-7f7615b05000 rw-p 0004b000 08:10 58132                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_decimal.cpython-38-x86_64-linux-gnu.so
+7f7615b05000-7f7615bc5000 rw-p 00000000 00:00 0 
+7f7615bc5000-7f7615bd5000 r--p 00000000 08:10 59645                      /home/taemin/apps/miniconda3/envs/py38/lib/libtinfow.so.6.3
+7f7615bd5000-7f7615bf0000 r-xp 00010000 08:10 59645                      /home/taemin/apps/miniconda3/envs/py38/lib/libtinfow.so.6.3
+7f7615bf0000-7f7615c01000 r--p 0002b000 08:10 59645                      /home/taemin/apps/miniconda3/envs/py38/lib/libtinfow.so.6.3
+7f7615c01000-7f7615c02000 ---p 0003c000 08:10 59645                      /home/taemin/apps/miniconda3/envs/py38/lib/libtinfow.so.6.3
+7f7615c02000-7f7615c06000 r--p 0003c000 08:10 59645                      /home/taemin/apps/miniconda3/envs/py38/lib/libtinfow.so.6.3
+7f7615c06000-7f7615c07000 rw-p 00040000 08:10 59645                      /home/taemin/apps/miniconda3/envs/py38/lib/libtinfow.so.6.3
+7f7615c07000-7f7615c13000 r--p 00000000 08:10 49265                      /home/taemin/apps/miniconda3/envs/py38/lib/libncursesw.so.6.3
+7f7615c13000-7f7615c39000 r-xp 0000c000 08:10 49265                      /home/taemin/apps/miniconda3/envs/py38/lib/libncursesw.so.6.3
+7f7615c39000-7f7615c42000 r--p 00032000 08:10 49265                      /home/taemin/apps/miniconda3/envs/py38/lib/libncursesw.so.6.3
+7f7615c42000-7f7615c43000 r--p 0003a000 08:10 49265                      /home/taemin/apps/miniconda3/envs/py38/lib/libncursesw.so.6.3
+7f7615c43000-7f7615c44000 rw-p 0003b000 08:10 49265                      /home/taemin/apps/miniconda3/envs/py38/lib/libncursesw.so.6.3
+7f7615c44000-7f7615c4b000 r--p 00000000 08:10 58121                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_curses.cpython-38-x86_64-linux-gnu.so
+7f7615c4b000-7f7615c55000 r-xp 00007000 08:10 58121                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_curses.cpython-38-x86_64-linux-gnu.so
+7f7615c55000-7f7615c5f000 r--p 00011000 08:10 58121                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_curses.cpython-38-x86_64-linux-gnu.so
+7f7615c5f000-7f7615c60000 ---p 0001b000 08:10 58121                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_curses.cpython-38-x86_64-linux-gnu.so
+7f7615c60000-7f7615c61000 r--p 0001b000 08:10 58121                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_curses.cpython-38-x86_64-linux-gnu.so
+7f7615c61000-7f7615c63000 rw-p 0001c000 08:10 58121                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_curses.cpython-38-x86_64-linux-gnu.so
+7f7615c63000-7f7615c67000 r--p 00000000 08:10 58112                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/array.cpython-38-x86_64-linux-gnu.so
+7f7615c67000-7f7615c70000 r-xp 00004000 08:10 58112                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/array.cpython-38-x86_64-linux-gnu.so
+7f7615c70000-7f7615c75000 r--p 0000d000 08:10 58112                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/array.cpython-38-x86_64-linux-gnu.so
+7f7615c75000-7f7615c76000 r--p 00011000 08:10 58112                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/array.cpython-38-x86_64-linux-gnu.so
+7f7615c76000-7f7615c77000 rw-p 00012000 08:10 58112                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/array.cpython-38-x86_64-linux-gnu.so
+7f7615c77000-7f7615cf7000 rw-p 00000000 00:00 0 
+7f7615cf7000-7f7615cfa000 r--p 00000000 08:10 80331                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/psutil/_psutil_linux.cpython-38-x86_64-linux-gnu.so
+7f7615cfa000-7f7615cfc000 r-xp 00003000 08:10 80331                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/psutil/_psutil_linux.cpython-38-x86_64-linux-gnu.so
+7f7615cfc000-7f7615cfd000 r--p 00005000 08:10 80331                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/psutil/_psutil_linux.cpython-38-x86_64-linux-gnu.so
+7f7615cfd000-7f7615cfe000 ---p 00006000 08:10 80331                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/psutil/_psutil_linux.cpython-38-x86_64-linux-gnu.so
+7f7615cfe000-7f7615cff000 r--p 00006000 08:10 80331                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/psutil/_psutil_linux.cpython-38-x86_64-linux-gnu.so
+7f7615cff000-7f7615d00000 rw-p 00007000 08:10 80331                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/psutil/_psutil_linux.cpython-38-x86_64-linux-gnu.so
+7f7615d00000-7f7615d02000 r--p 00000000 08:10 58088                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_lsprof.cpython-38-x86_64-linux-gnu.so
+7f7615d02000-7f7615d04000 r-xp 00002000 08:10 58088                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_lsprof.cpython-38-x86_64-linux-gnu.so
+7f7615d04000-7f7615d06000 r--p 00004000 08:10 58088                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_lsprof.cpython-38-x86_64-linux-gnu.so
+7f7615d06000-7f7615d07000 r--p 00005000 08:10 58088                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_lsprof.cpython-38-x86_64-linux-gnu.so
+7f7615d07000-7f7615d08000 rw-p 00006000 08:10 58088                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_lsprof.cpython-38-x86_64-linux-gnu.so
+7f7615d08000-7f7615d88000 rw-p 00000000 00:00 0 
+7f7615d88000-7f7615d8a000 r--p 00000000 08:10 58073                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/grp.cpython-38-x86_64-linux-gnu.so
+7f7615d8a000-7f7615d8b000 r-xp 00002000 08:10 58073                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/grp.cpython-38-x86_64-linux-gnu.so
+7f7615d8b000-7f7615d8c000 r--p 00003000 08:10 58073                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/grp.cpython-38-x86_64-linux-gnu.so
+7f7615d8c000-7f7615d8d000 r--p 00003000 08:10 58073                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/grp.cpython-38-x86_64-linux-gnu.so
+7f7615d8d000-7f7615d8e000 rw-p 00004000 08:10 58073                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/grp.cpython-38-x86_64-linux-gnu.so
+7f7615d8e000-7f7615dce000 rw-p 00000000 00:00 0 
+7f7615dce000-7f7615dd2000 r--p 00000000 08:10 50385                      /home/taemin/apps/miniconda3/envs/py38/lib/liblzma.so.5.2.5
+7f7615dd2000-7f7615de9000 r-xp 00004000 08:10 50385                      /home/taemin/apps/miniconda3/envs/py38/lib/liblzma.so.5.2.5
+7f7615de9000-7f7615df4000 r--p 0001b000 08:10 50385                      /home/taemin/apps/miniconda3/envs/py38/lib/liblzma.so.5.2.5
+7f7615df4000-7f7615df5000 ---p 00026000 08:10 50385                      /home/taemin/apps/miniconda3/envs/py38/lib/liblzma.so.5.2.5
+7f7615df5000-7f7615df6000 r--p 00026000 08:10 50385                      /home/taemin/apps/miniconda3/envs/py38/lib/liblzma.so.5.2.5
+7f7615df6000-7f7615df7000 rw-p 00027000 08:10 50385                      /home/taemin/apps/miniconda3/envs/py38/lib/liblzma.so.5.2.5
+7f7615df7000-7f7615dfa000 r--p 00000000 08:10 58096                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_lzma.cpython-38-x86_64-linux-gnu.so
+7f7615dfa000-7f7615dfd000 r-xp 00003000 08:10 58096                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_lzma.cpython-38-x86_64-linux-gnu.so
+7f7615dfd000-7f7615e00000 r--p 00006000 08:10 58096                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_lzma.cpython-38-x86_64-linux-gnu.so
+7f7615e00000-7f7615e01000 r--p 00008000 08:10 58096                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_lzma.cpython-38-x86_64-linux-gnu.so
+7f7615e01000-7f7615e02000 rw-p 00009000 08:10 58096                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_lzma.cpython-38-x86_64-linux-gnu.so
+7f7615e02000-7f7615e05000 r--p 00000000 08:10 58100                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_bz2.cpython-38-x86_64-linux-gnu.so
+7f7615e05000-7f7615e14000 r-xp 00003000 08:10 58100                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_bz2.cpython-38-x86_64-linux-gnu.so
+7f7615e14000-7f7615e17000 r--p 00012000 08:10 58100                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_bz2.cpython-38-x86_64-linux-gnu.so
+7f7615e17000-7f7615e18000 r--p 00014000 08:10 58100                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_bz2.cpython-38-x86_64-linux-gnu.so
+7f7615e18000-7f7615e1a000 rw-p 00015000 08:10 58100                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_bz2.cpython-38-x86_64-linux-gnu.so
+7f7615e1a000-7f7615e1c000 r--p 00000000 08:10 58101                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/zlib.cpython-38-x86_64-linux-gnu.so
+7f7615e1c000-7f7615e21000 r-xp 00002000 08:10 58101                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/zlib.cpython-38-x86_64-linux-gnu.so
+7f7615e21000-7f7615e24000 r--p 00007000 08:10 58101                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/zlib.cpython-38-x86_64-linux-gnu.so
+7f7615e24000-7f7615e25000 r--p 00009000 08:10 58101                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/zlib.cpython-38-x86_64-linux-gnu.so
+7f7615e25000-7f7615e26000 rw-p 0000a000 08:10 58101                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/zlib.cpython-38-x86_64-linux-gnu.so
+7f7615e26000-7f7615e66000 rw-p 00000000 00:00 0 
+7f7615e66000-7f7615e6b000 r--p 00000000 08:10 58128                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_datetime.cpython-38-x86_64-linux-gnu.so
+7f7615e6b000-7f7615e7c000 r-xp 00005000 08:10 58128                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_datetime.cpython-38-x86_64-linux-gnu.so
+7f7615e7c000-7f7615e82000 r--p 00016000 08:10 58128                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_datetime.cpython-38-x86_64-linux-gnu.so
+7f7615e82000-7f7615e83000 r--p 0001b000 08:10 58128                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_datetime.cpython-38-x86_64-linux-gnu.so
+7f7615e83000-7f7615e85000 rw-p 0001c000 08:10 58128                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_datetime.cpython-38-x86_64-linux-gnu.so
+7f7615e85000-7f7615ec5000 rw-p 00000000 00:00 0 
+7f7615ec5000-7f7615ec8000 r--p 00000000 08:10 58125                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sha3.cpython-38-x86_64-linux-gnu.so
+7f7615ec8000-7f7615edb000 r-xp 00003000 08:10 58125                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sha3.cpython-38-x86_64-linux-gnu.so
+7f7615edb000-7f7615edd000 r--p 00016000 08:10 58125                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sha3.cpython-38-x86_64-linux-gnu.so
+7f7615edd000-7f7615ede000 r--p 00017000 08:10 58125                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sha3.cpython-38-x86_64-linux-gnu.so
+7f7615ede000-7f7615edf000 rw-p 00018000 08:10 58125                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sha3.cpython-38-x86_64-linux-gnu.so
+7f7615edf000-7f7615ee1000 r--p 00000000 08:10 58114                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_blake2.cpython-38-x86_64-linux-gnu.so
+7f7615ee1000-7f7615eec000 r-xp 00002000 08:10 58114                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_blake2.cpython-38-x86_64-linux-gnu.so
+7f7615eec000-7f7615eee000 r--p 0000d000 08:10 58114                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_blake2.cpython-38-x86_64-linux-gnu.so
+7f7615eee000-7f7615eef000 r--p 0000e000 08:10 58114                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_blake2.cpython-38-x86_64-linux-gnu.so
+7f7615eef000-7f7615ef0000 rw-p 0000f000 08:10 58114                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_blake2.cpython-38-x86_64-linux-gnu.so
+7f7615ef0000-7f7615ef3000 r--p 00000000 08:10 58098                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_hashlib.cpython-38-x86_64-linux-gnu.so
+7f7615ef3000-7f7615ef7000 r-xp 00003000 08:10 58098                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_hashlib.cpython-38-x86_64-linux-gnu.so
+7f7615ef7000-7f7615ef9000 r--p 00007000 08:10 58098                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_hashlib.cpython-38-x86_64-linux-gnu.so
+7f7615ef9000-7f7615efa000 r--p 00008000 08:10 58098                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_hashlib.cpython-38-x86_64-linux-gnu.so
+7f7615efa000-7f7615efb000 rw-p 00009000 08:10 58098                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_hashlib.cpython-38-x86_64-linux-gnu.so
+7f7615efb000-7f7615f3b000 rw-p 00000000 00:00 0 
+7f7615f3b000-7f7615f3e000 r--p 00000000 08:10 76572                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_proxy_steerable.cpython-38-x86_64-linux-gnu.so
+7f7615f3e000-7f7615f43000 r-xp 00003000 08:10 76572                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_proxy_steerable.cpython-38-x86_64-linux-gnu.so
+7f7615f43000-7f7615f45000 r--p 00008000 08:10 76572                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_proxy_steerable.cpython-38-x86_64-linux-gnu.so
+7f7615f45000-7f7615f46000 r--p 00009000 08:10 76572                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_proxy_steerable.cpython-38-x86_64-linux-gnu.so
+7f7615f46000-7f7615f47000 rw-p 0000a000 08:10 76572                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_proxy_steerable.cpython-38-x86_64-linux-gnu.so
+7f7615f47000-7f7615f4a000 r--p 00000000 08:10 76574                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_device.cpython-38-x86_64-linux-gnu.so
+7f7615f4a000-7f7615f50000 r-xp 00003000 08:10 76574                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_device.cpython-38-x86_64-linux-gnu.so
+7f7615f50000-7f7615f52000 r--p 00009000 08:10 76574                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_device.cpython-38-x86_64-linux-gnu.so
+7f7615f52000-7f7615f53000 r--p 0000a000 08:10 76574                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_device.cpython-38-x86_64-linux-gnu.so
+7f7615f53000-7f7615f54000 rw-p 0000b000 08:10 76574                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_device.cpython-38-x86_64-linux-gnu.so
+7f7615f54000-7f7615f57000 r--p 00000000 08:10 76570                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_version.cpython-38-x86_64-linux-gnu.so
+7f7615f57000-7f7615f59000 r-xp 00003000 08:10 76570                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_version.cpython-38-x86_64-linux-gnu.so
+7f7615f59000-7f7615f5a000 r--p 00005000 08:10 76570                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_version.cpython-38-x86_64-linux-gnu.so
+7f7615f5a000-7f7615f5b000 ---p 00006000 08:10 76570                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_version.cpython-38-x86_64-linux-gnu.so
+7f7615f5b000-7f7615f5c000 r--p 00006000 08:10 76570                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_version.cpython-38-x86_64-linux-gnu.so
+7f7615f5c000-7f7615f5d000 rw-p 00007000 08:10 76570                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_version.cpython-38-x86_64-linux-gnu.so
+7f7615f5d000-7f7615f61000 r--p 00000000 08:10 76577                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_poll.cpython-38-x86_64-linux-gnu.so
+7f7615f61000-7f7615f6b000 r-xp 00004000 08:10 76577                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_poll.cpython-38-x86_64-linux-gnu.so
+7f7615f6b000-7f7615f6d000 r--p 0000e000 08:10 76577                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_poll.cpython-38-x86_64-linux-gnu.so
+7f7615f6d000-7f7615f6e000 ---p 00010000 08:10 76577                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_poll.cpython-38-x86_64-linux-gnu.so
+7f7615f6e000-7f7615f6f000 r--p 00010000 08:10 76577                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_poll.cpython-38-x86_64-linux-gnu.so
+7f7615f6f000-7f7615f71000 rw-p 00011000 08:10 76577                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/_poll.cpython-38-x86_64-linux-gnu.so
+7f7615f71000-7f7615f74000 r--p 00000000 08:10 76573                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/utils.cpython-38-x86_64-linux-gnu.so
+7f7615f74000-7f7615f79000 r-xp 00003000 08:10 76573                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/utils.cpython-38-x86_64-linux-gnu.so
+7f7615f79000-7f7615f7b000 r--p 00008000 08:10 76573                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/utils.cpython-38-x86_64-linux-gnu.so
+7f7615f7b000-7f7615f7c000 r--p 00009000 08:10 76573                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/utils.cpython-38-x86_64-linux-gnu.so
+7f7615f7c000-7f7615f7d000 rw-p 0000a000 08:10 76573                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/utils.cpython-38-x86_64-linux-gnu.so
+7f7615f7d000-7f7615f7e000 rw-p 00000000 00:00 0 
+7f7615f7e000-7f7615f83000 r--p 00000000 08:10 58127                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_pickle.cpython-38-x86_64-linux-gnu.so
+7f7615f83000-7f7615f98000 r-xp 00005000 08:10 58127                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_pickle.cpython-38-x86_64-linux-gnu.so
+7f7615f98000-7f7615f9e000 r--p 0001a000 08:10 58127                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_pickle.cpython-38-x86_64-linux-gnu.so
+7f7615f9e000-7f7615f9f000 ---p 00020000 08:10 58127                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_pickle.cpython-38-x86_64-linux-gnu.so
+7f7615f9f000-7f7615fa0000 r--p 00020000 08:10 58127                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_pickle.cpython-38-x86_64-linux-gnu.so
+7f7615fa0000-7f7615fa2000 rw-p 00021000 08:10 58127                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_pickle.cpython-38-x86_64-linux-gnu.so
+7f7615fa2000-7f7615fe2000 rw-p 00000000 00:00 0 
+7f7615fe2000-7f7615fe4000 r--p 00000000 08:10 58079                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_random.cpython-38-x86_64-linux-gnu.so
+7f7615fe4000-7f7615fe6000 r-xp 00002000 08:10 58079                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_random.cpython-38-x86_64-linux-gnu.so
+7f7615fe6000-7f7615fe7000 r--p 00004000 08:10 58079                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_random.cpython-38-x86_64-linux-gnu.so
+7f7615fe7000-7f7615fe8000 r--p 00004000 08:10 58079                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_random.cpython-38-x86_64-linux-gnu.so
+7f7615fe8000-7f7615fe9000 rw-p 00005000 08:10 58079                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_random.cpython-38-x86_64-linux-gnu.so
+7f7615fe9000-7f7615fea000 r--p 00000000 08:10 58092                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sha512.cpython-38-x86_64-linux-gnu.so
+7f7615fea000-7f7615ff2000 r-xp 00001000 08:10 58092                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sha512.cpython-38-x86_64-linux-gnu.so
+7f7615ff2000-7f7615ff3000 r--p 00009000 08:10 58092                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sha512.cpython-38-x86_64-linux-gnu.so
+7f7615ff3000-7f7615ff4000 r--p 00009000 08:10 58092                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sha512.cpython-38-x86_64-linux-gnu.so
+7f7615ff4000-7f7615ff5000 rw-p 0000a000 08:10 58092                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_sha512.cpython-38-x86_64-linux-gnu.so
+7f7615ff5000-7f7615ffc000 r--p 00000000 08:10 76580                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/socket.cpython-38-x86_64-linux-gnu.so
+7f7615ffc000-7f7616010000 r-xp 00007000 08:10 76580                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/socket.cpython-38-x86_64-linux-gnu.so
+7f7616010000-7f7616014000 r--p 0001b000 08:10 76580                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/socket.cpython-38-x86_64-linux-gnu.so
+7f7616014000-7f7616015000 ---p 0001f000 08:10 76580                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/socket.cpython-38-x86_64-linux-gnu.so
+7f7616015000-7f7616016000 r--p 0001f000 08:10 76580                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/socket.cpython-38-x86_64-linux-gnu.so
+7f7616016000-7f761601a000 rw-p 00020000 08:10 76580                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/socket.cpython-38-x86_64-linux-gnu.so
+7f761601a000-7f761601b000 rw-p 00000000 00:00 0 
+7f761601b000-7f761601f000 r--p 00000000 08:10 76576                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/context.cpython-38-x86_64-linux-gnu.so
+7f761601f000-7f7616028000 r-xp 00004000 08:10 76576                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/context.cpython-38-x86_64-linux-gnu.so
+7f7616028000-7f761602b000 r--p 0000d000 08:10 76576                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/context.cpython-38-x86_64-linux-gnu.so
+7f761602b000-7f761602c000 r--p 0000f000 08:10 76576                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/context.cpython-38-x86_64-linux-gnu.so
+7f761602c000-7f761602e000 rw-p 00010000 08:10 76576                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/context.cpython-38-x86_64-linux-gnu.so
+7f761602e000-7f7616034000 r--p 00000000 08:10 76579                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/message.cpython-38-x86_64-linux-gnu.so
+7f7616034000-7f7616041000 r-xp 00006000 08:10 76579                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/message.cpython-38-x86_64-linux-gnu.so
+7f7616041000-7f7616044000 r--p 00013000 08:10 76579                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/message.cpython-38-x86_64-linux-gnu.so
+7f7616044000-7f7616045000 ---p 00016000 08:10 76579                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/message.cpython-38-x86_64-linux-gnu.so
+7f7616045000-7f7616046000 r--p 00016000 08:10 76579                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/message.cpython-38-x86_64-linux-gnu.so
+7f7616046000-7f7616049000 rw-p 00017000 08:10 76579                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/message.cpython-38-x86_64-linux-gnu.so
+7f7616049000-7f761604c000 r--p 00000000 08:10 43717                      /home/taemin/apps/miniconda3/envs/py38/lib/libgcc_s.so.1
+7f761604c000-7f7616058000 r-xp 00003000 08:10 43717                      /home/taemin/apps/miniconda3/envs/py38/lib/libgcc_s.so.1
+7f7616058000-7f761605b000 r--p 0000f000 08:10 43717                      /home/taemin/apps/miniconda3/envs/py38/lib/libgcc_s.so.1
+7f761605b000-7f761605c000 r--p 00011000 08:10 43717                      /home/taemin/apps/miniconda3/envs/py38/lib/libgcc_s.so.1
+7f761605c000-7f761605d000 rw-p 00012000 08:10 43717                      /home/taemin/apps/miniconda3/envs/py38/lib/libgcc_s.so.1
+7f761605d000-7f7616100000 r--p 00000000 08:10 41855                      /home/taemin/apps/miniconda3/envs/py38/lib/libstdc++.so.6.0.28
+7f7616100000-7f761617f000 r-xp 000a3000 08:10 41855                      /home/taemin/apps/miniconda3/envs/py38/lib/libstdc++.so.6.0.28
+7f761617f000-7f76161c0000 r--p 00122000 08:10 41855                      /home/taemin/apps/miniconda3/envs/py38/lib/libstdc++.so.6.0.28
+7f76161c0000-7f76161cb000 r--p 00162000 08:10 41855                      /home/taemin/apps/miniconda3/envs/py38/lib/libstdc++.so.6.0.28
+7f76161cb000-7f76161cf000 rw-p 0016d000 08:10 41855                      /home/taemin/apps/miniconda3/envs/py38/lib/libstdc++.so.6.0.28
+7f76161cf000-7f76161d2000 rw-p 00000000 00:00 0 
+7f76161d2000-7f76161d4000 r--p 00000000 08:10 40975                      /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7f76161d4000-7f76161d8000 r-xp 00002000 08:10 40975                      /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7f76161d8000-7f76161da000 r--p 00006000 08:10 40975                      /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7f76161da000-7f76161db000 r--p 00007000 08:10 40975                      /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7f76161db000-7f76161dc000 rw-p 00008000 08:10 40975                      /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7f76161dc000-7f76161dd000 r--s 0000a000 08:10 114687                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
+7f76161dd000-7f76161de000 r--p 00000000 08:10 21558                      /usr/lib/locale/C.UTF-8/LC_NUMERIC
+7f76161de000-7f76161df000 r--p 00000000 08:10 21561                      /usr/lib/locale/C.UTF-8/LC_TIME
+7f76161df000-7f76161e0000 r--p 00000000 08:10 21556                      /usr/lib/locale/C.UTF-8/LC_MONETARY
+7f76161e0000-7f76161e1000 r--p 00000000 08:10 58069                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_bisect.cpython-38-x86_64-linux-gnu.so
+7f76161e1000-7f76161e2000 r-xp 00001000 08:10 58069                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_bisect.cpython-38-x86_64-linux-gnu.so
+7f76161e2000-7f76161e3000 r--p 00002000 08:10 58069                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_bisect.cpython-38-x86_64-linux-gnu.so
+7f76161e3000-7f76161e4000 r--p 00002000 08:10 58069                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_bisect.cpython-38-x86_64-linux-gnu.so
+7f76161e4000-7f76161e5000 rw-p 00003000 08:10 58069                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_bisect.cpython-38-x86_64-linux-gnu.so
+7f76161e5000-7f76161f3000 r--p 00000000 08:10 74615                      /home/taemin/apps/miniconda3/envs/py38/lib/libsodium.so.23.3.0
+7f76161f3000-7f761622c000 r-xp 0000e000 08:10 74615                      /home/taemin/apps/miniconda3/envs/py38/lib/libsodium.so.23.3.0
+7f761622c000-7f761623e000 r--p 00047000 08:10 74615                      /home/taemin/apps/miniconda3/envs/py38/lib/libsodium.so.23.3.0
+7f761623e000-7f761623f000 r--p 00058000 08:10 74615                      /home/taemin/apps/miniconda3/envs/py38/lib/libsodium.so.23.3.0
+7f761623f000-7f7616240000 rw-p 00059000 08:10 74615                      /home/taemin/apps/miniconda3/envs/py38/lib/libsodium.so.23.3.0
+7f7616240000-7f7616257000 r--p 00000000 08:10 74370                      /home/taemin/apps/miniconda3/envs/py38/lib/libzmq.so.5.2.4
+7f7616257000-7f76162b7000 r-xp 00017000 08:10 74370                      /home/taemin/apps/miniconda3/envs/py38/lib/libzmq.so.5.2.4
+7f76162b7000-7f76162d3000 r--p 00077000 08:10 74370                      /home/taemin/apps/miniconda3/envs/py38/lib/libzmq.so.5.2.4
+7f76162d3000-7f76162d4000 ---p 00093000 08:10 74370                      /home/taemin/apps/miniconda3/envs/py38/lib/libzmq.so.5.2.4
+7f76162d4000-7f76162dc000 r--p 00093000 08:10 74370                      /home/taemin/apps/miniconda3/envs/py38/lib/libzmq.so.5.2.4
+7f76162dc000-7f76162dd000 rw-p 0009b000 08:10 74370                      /home/taemin/apps/miniconda3/envs/py38/lib/libzmq.so.5.2.4
+7f76162dd000-7f76162e0000 r--p 00000000 08:10 76571                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/error.cpython-38-x86_64-linux-gnu.so
+7f76162e0000-7f76162e3000 r-xp 00003000 08:10 76571                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/error.cpython-38-x86_64-linux-gnu.so
+7f76162e3000-7f76162e5000 r--p 00006000 08:10 76571                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/error.cpython-38-x86_64-linux-gnu.so
+7f76162e5000-7f76162e6000 r--p 00007000 08:10 76571                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/error.cpython-38-x86_64-linux-gnu.so
+7f76162e6000-7f76162e7000 rw-p 00008000 08:10 76571                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/error.cpython-38-x86_64-linux-gnu.so
+7f76162e7000-7f76162ec000 r--p 00000000 08:10 76578                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/constants.cpython-38-x86_64-linux-gnu.so
+7f76162ec000-7f76162f4000 r-xp 00005000 08:10 76578                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/constants.cpython-38-x86_64-linux-gnu.so
+7f76162f4000-7f76162f6000 r--p 0000d000 08:10 76578                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/constants.cpython-38-x86_64-linux-gnu.so
+7f76162f6000-7f76162f7000 r--p 0000e000 08:10 76578                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/constants.cpython-38-x86_64-linux-gnu.so
+7f76162f7000-7f76162fa000 rw-p 0000f000 08:10 76578                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/zmq/backend/cython/constants.cpython-38-x86_64-linux-gnu.so
+7f76162fa000-7f761633a000 rw-p 00000000 00:00 0 
+7f761633a000-7f761633c000 r--p 00000000 08:10 43282                      /home/taemin/apps/miniconda3/envs/py38/lib/libffi.so.7.1.0
+7f761633c000-7f7616342000 r-xp 00002000 08:10 43282                      /home/taemin/apps/miniconda3/envs/py38/lib/libffi.so.7.1.0
+7f7616342000-7f7616343000 r--p 00008000 08:10 43282                      /home/taemin/apps/miniconda3/envs/py38/lib/libffi.so.7.1.0
+7f7616343000-7f7616344000 ---p 00009000 08:10 43282                      /home/taemin/apps/miniconda3/envs/py38/lib/libffi.so.7.1.0
+7f7616344000-7f7616345000 r--p 00009000 08:10 43282                      /home/taemin/apps/miniconda3/envs/py38/lib/libffi.so.7.1.0
+7f7616345000-7f7616346000 rw-p 0000a000 08:10 43282                      /home/taemin/apps/miniconda3/envs/py38/lib/libffi.so.7.1.0
+7f7616346000-7f761634e000 r--p 00000000 08:10 58129                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so
+7f761634e000-7f7616360000 r-xp 00008000 08:10 58129                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so
+7f7616360000-7f7616367000 r--p 0001a000 08:10 58129                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so
+7f7616367000-7f7616368000 r--p 00020000 08:10 58129                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so
+7f7616368000-7f761636c000 rw-p 00021000 08:10 58129                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so
+7f761636c000-7f761636e000 r--p 00000000 08:10 58075                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_queue.cpython-38-x86_64-linux-gnu.so
+7f761636e000-7f761636f000 r-xp 00002000 08:10 58075                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_queue.cpython-38-x86_64-linux-gnu.so
+7f761636f000-7f7616370000 r--p 00003000 08:10 58075                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_queue.cpython-38-x86_64-linux-gnu.so
+7f7616370000-7f7616371000 r--p 00003000 08:10 58075                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_queue.cpython-38-x86_64-linux-gnu.so
+7f7616371000-7f7616372000 rw-p 00004000 08:10 58075                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_queue.cpython-38-x86_64-linux-gnu.so
+7f7616372000-7f7616432000 rw-p 00000000 00:00 0 
+7f7616432000-7f7616436000 r--p 00000000 08:10 58120                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_asyncio.cpython-38-x86_64-linux-gnu.so
+7f7616436000-7f7616440000 r-xp 00004000 08:10 58120                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_asyncio.cpython-38-x86_64-linux-gnu.so
+7f7616440000-7f7616444000 r--p 0000e000 08:10 58120                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_asyncio.cpython-38-x86_64-linux-gnu.so
+7f7616444000-7f7616445000 ---p 00012000 08:10 58120                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_asyncio.cpython-38-x86_64-linux-gnu.so
+7f7616445000-7f7616446000 r--p 00012000 08:10 58120                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_asyncio.cpython-38-x86_64-linux-gnu.so
+7f7616446000-7f7616448000 rw-p 00013000 08:10 58120                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_asyncio.cpython-38-x86_64-linux-gnu.so
+7f7616448000-7f761644b000 r--p 00000000 08:10 50182                      /home/taemin/apps/miniconda3/envs/py38/lib/libz.so.1.2.11
+7f761644b000-7f761645f000 r-xp 00003000 08:10 50182                      /home/taemin/apps/miniconda3/envs/py38/lib/libz.so.1.2.11
+7f761645f000-7f7616466000 r--p 00017000 08:10 50182                      /home/taemin/apps/miniconda3/envs/py38/lib/libz.so.1.2.11
+7f7616466000-7f7616467000 r--p 0001d000 08:10 50182                      /home/taemin/apps/miniconda3/envs/py38/lib/libz.so.1.2.11
+7f7616467000-7f7616468000 rw-p 0001e000 08:10 50182                      /home/taemin/apps/miniconda3/envs/py38/lib/libz.so.1.2.11
+7f7616468000-7f76164a8000 rw-p 00000000 00:00 0 
+7f76164a8000-7f7616523000 r--p 00000000 08:10 59805                      /home/taemin/apps/miniconda3/envs/py38/lib/libcrypto.so.1.1
+7f7616523000-7f76166b7000 r-xp 0007b000 08:10 59805                      /home/taemin/apps/miniconda3/envs/py38/lib/libcrypto.so.1.1
+7f76166b7000-7f7616744000 r--p 0020f000 08:10 59805                      /home/taemin/apps/miniconda3/envs/py38/lib/libcrypto.so.1.1
+7f7616744000-7f761676f000 r--p 0029b000 08:10 59805                      /home/taemin/apps/miniconda3/envs/py38/lib/libcrypto.so.1.1
+7f761676f000-7f7616771000 rw-p 002c6000 08:10 59805                      /home/taemin/apps/miniconda3/envs/py38/lib/libcrypto.so.1.1
+7f7616771000-7f7616776000 rw-p 00000000 00:00 0 
+7f7616776000-7f7616795000 r--p 00000000 08:10 3769                       /home/taemin/apps/miniconda3/envs/py38/lib/libssl.so.1.1
+7f7616795000-7f76167e0000 r-xp 0001f000 08:10 3769                       /home/taemin/apps/miniconda3/envs/py38/lib/libssl.so.1.1
+7f76167e0000-7f76167f9000 r--p 0006a000 08:10 3769                       /home/taemin/apps/miniconda3/envs/py38/lib/libssl.so.1.1
+7f76167f9000-7f76167fa000 ---p 00083000 08:10 3769                       /home/taemin/apps/miniconda3/envs/py38/lib/libssl.so.1.1
+7f76167fa000-7f7616803000 r--p 00083000 08:10 3769                       /home/taemin/apps/miniconda3/envs/py38/lib/libssl.so.1.1
+7f7616803000-7f7616807000 rw-p 0008c000 08:10 3769                       /home/taemin/apps/miniconda3/envs/py38/lib/libssl.so.1.1
+7f7616807000-7f7616817000 r--p 00000000 08:10 58126                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_ssl.cpython-38-x86_64-linux-gnu.so
+7f7616817000-7f7616824000 r-xp 00010000 08:10 58126                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_ssl.cpython-38-x86_64-linux-gnu.so
+7f7616824000-7f7616830000 r--p 0001d000 08:10 58126                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_ssl.cpython-38-x86_64-linux-gnu.so
+7f7616830000-7f7616831000 ---p 00029000 08:10 58126                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_ssl.cpython-38-x86_64-linux-gnu.so
+7f7616831000-7f7616832000 r--p 00029000 08:10 58126                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_ssl.cpython-38-x86_64-linux-gnu.so
+7f7616832000-7f7616839000 rw-p 0002a000 08:10 58126                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_ssl.cpython-38-x86_64-linux-gnu.so
+7f7616839000-7f7616879000 rw-p 00000000 00:00 0 
+7f7616879000-7f761687e000 r--p 00000000 08:10 58124                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_socket.cpython-38-x86_64-linux-gnu.so
+7f761687e000-7f761688e000 r-xp 00005000 08:10 58124                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_socket.cpython-38-x86_64-linux-gnu.so
+7f761688e000-7f7616898000 r--p 00015000 08:10 58124                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_socket.cpython-38-x86_64-linux-gnu.so
+7f7616898000-7f7616899000 r--p 0001e000 08:10 58124                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_socket.cpython-38-x86_64-linux-gnu.so
+7f7616899000-7f761689a000 rw-p 0001f000 08:10 58124                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_socket.cpython-38-x86_64-linux-gnu.so
+7f761689a000-7f761699a000 rw-p 00000000 00:00 0 
+7f761699a000-7f761699b000 r--p 00000000 08:10 21555                      /usr/lib/locale/C.UTF-8/LC_MESSAGES/SYS_LC_MESSAGES
+7f761699b000-7f761699c000 r--p 00000000 08:10 21559                      /usr/lib/locale/C.UTF-8/LC_PAPER
+7f761699c000-7f761699d000 r--p 00000000 08:10 21557                      /usr/lib/locale/C.UTF-8/LC_NAME
+7f761699d000-7f761699e000 r--p 00000000 08:10 21550                      /usr/lib/locale/C.UTF-8/LC_ADDRESS
+7f761699e000-7f761699f000 r--p 00000000 08:10 76858                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/tornado/speedups.cpython-38-x86_64-linux-gnu.so
+7f761699f000-7f76169a0000 r-xp 00001000 08:10 76858                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/tornado/speedups.cpython-38-x86_64-linux-gnu.so
+7f76169a0000-7f76169a1000 r--p 00002000 08:10 76858                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/tornado/speedups.cpython-38-x86_64-linux-gnu.so
+7f76169a1000-7f76169a2000 r--p 00002000 08:10 76858                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/tornado/speedups.cpython-38-x86_64-linux-gnu.so
+7f76169a2000-7f76169a3000 rw-p 00003000 08:10 76858                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/tornado/speedups.cpython-38-x86_64-linux-gnu.so
+7f76169a3000-7f7616a63000 rw-p 00000000 00:00 0 
+7f7616a63000-7f7616a67000 r--p 00000000 08:10 58113                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/math.cpython-38-x86_64-linux-gnu.so
+7f7616a67000-7f7616a6f000 r-xp 00004000 08:10 58113                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/math.cpython-38-x86_64-linux-gnu.so
+7f7616a6f000-7f7616a73000 r--p 0000c000 08:10 58113                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/math.cpython-38-x86_64-linux-gnu.so
+7f7616a73000-7f7616a74000 ---p 00010000 08:10 58113                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/math.cpython-38-x86_64-linux-gnu.so
+7f7616a74000-7f7616a75000 r--p 00010000 08:10 58113                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/math.cpython-38-x86_64-linux-gnu.so
+7f7616a75000-7f7616a76000 rw-p 00011000 08:10 58113                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/math.cpython-38-x86_64-linux-gnu.so
+7f7616a76000-7f7616a79000 r--p 00000000 08:10 58103                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/select.cpython-38-x86_64-linux-gnu.so
+7f7616a79000-7f7616a7d000 r-xp 00003000 08:10 58103                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/select.cpython-38-x86_64-linux-gnu.so
+7f7616a7d000-7f7616a7f000 r--p 00007000 08:10 58103                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/select.cpython-38-x86_64-linux-gnu.so
+7f7616a7f000-7f7616a80000 ---p 00009000 08:10 58103                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/select.cpython-38-x86_64-linux-gnu.so
+7f7616a80000-7f7616a81000 r--p 00009000 08:10 58103                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/select.cpython-38-x86_64-linux-gnu.so
+7f7616a81000-7f7616a82000 rw-p 0000a000 08:10 58103                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/select.cpython-38-x86_64-linux-gnu.so
+7f7616a82000-7f7616a84000 r--p 00000000 08:10 58084                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_posixsubprocess.cpython-38-x86_64-linux-gnu.so
+7f7616a84000-7f7616a86000 r-xp 00002000 08:10 58084                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_posixsubprocess.cpython-38-x86_64-linux-gnu.so
+7f7616a86000-7f7616a87000 r--p 00004000 08:10 58084                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_posixsubprocess.cpython-38-x86_64-linux-gnu.so
+7f7616a87000-7f7616a88000 r--p 00004000 08:10 58084                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_posixsubprocess.cpython-38-x86_64-linux-gnu.so
+7f7616a88000-7f7616a89000 rw-p 00005000 08:10 58084                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_posixsubprocess.cpython-38-x86_64-linux-gnu.so
+7f7616a89000-7f7616ac9000 rw-p 00000000 00:00 0 
+7f7616ac9000-7f7616acc000 r--p 00000000 08:10 58122                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_json.cpython-38-x86_64-linux-gnu.so
+7f7616acc000-7f7616adc000 r-xp 00003000 08:10 58122                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_json.cpython-38-x86_64-linux-gnu.so
+7f7616adc000-7f7616ade000 r--p 00013000 08:10 58122                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_json.cpython-38-x86_64-linux-gnu.so
+7f7616ade000-7f7616adf000 r--p 00014000 08:10 58122                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_json.cpython-38-x86_64-linux-gnu.so
+7f7616adf000-7f7616ae0000 rw-p 00015000 08:10 58122                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_json.cpython-38-x86_64-linux-gnu.so
+7f7616ae0000-7f7616ba0000 rw-p 00000000 00:00 0 
+7f7616ba0000-7f7616ba1000 r--p 00000000 08:10 58093                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_heapq.cpython-38-x86_64-linux-gnu.so
+7f7616ba1000-7f7616ba4000 r-xp 00001000 08:10 58093                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_heapq.cpython-38-x86_64-linux-gnu.so
+7f7616ba4000-7f7616ba7000 r--p 00004000 08:10 58093                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_heapq.cpython-38-x86_64-linux-gnu.so
+7f7616ba7000-7f7616ba8000 r--p 00006000 08:10 58093                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_heapq.cpython-38-x86_64-linux-gnu.so
+7f7616ba8000-7f7616ba9000 rw-p 00007000 08:10 58093                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_heapq.cpython-38-x86_64-linux-gnu.so
+7f7616ba9000-7f7616c29000 rw-p 00000000 00:00 0 
+7f7616c29000-7f7616c2a000 r--p 00000000 08:10 21560                      /usr/lib/locale/C.UTF-8/LC_TELEPHONE
+7f7616c2a000-7f7616c2b000 r--p 00000000 08:10 21554                      /usr/lib/locale/C.UTF-8/LC_MEASUREMENT
+7f7616c2b000-7f7616c2c000 r--p 00000000 08:10 58063                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_contextvars.cpython-38-x86_64-linux-gnu.so
+7f7616c2c000-7f7616c2d000 r-xp 00001000 08:10 58063                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_contextvars.cpython-38-x86_64-linux-gnu.so
+7f7616c2d000-7f7616c2e000 r--p 00002000 08:10 58063                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_contextvars.cpython-38-x86_64-linux-gnu.so
+7f7616c2e000-7f7616c2f000 r--p 00002000 08:10 58063                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_contextvars.cpython-38-x86_64-linux-gnu.so
+7f7616c2f000-7f7616c30000 rw-p 00003000 08:10 58063                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_contextvars.cpython-38-x86_64-linux-gnu.so
+7f7616c30000-7f7616c32000 r--p 00000000 08:10 58095                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/binascii.cpython-38-x86_64-linux-gnu.so
+7f7616c32000-7f7616c36000 r-xp 00002000 08:10 58095                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/binascii.cpython-38-x86_64-linux-gnu.so
+7f7616c36000-7f7616c38000 r--p 00006000 08:10 58095                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/binascii.cpython-38-x86_64-linux-gnu.so
+7f7616c38000-7f7616c39000 r--p 00007000 08:10 58095                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/binascii.cpython-38-x86_64-linux-gnu.so
+7f7616c39000-7f7616c3a000 rw-p 00008000 08:10 58095                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/binascii.cpython-38-x86_64-linux-gnu.so
+7f7616c3a000-7f7616c3d000 r--p 00000000 08:10 58109                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_struct.cpython-38-x86_64-linux-gnu.so
+7f7616c3d000-7f7616c43000 r-xp 00003000 08:10 58109                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_struct.cpython-38-x86_64-linux-gnu.so
+7f7616c43000-7f7616c47000 r--p 00009000 08:10 58109                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_struct.cpython-38-x86_64-linux-gnu.so
+7f7616c47000-7f7616c48000 r--p 0000c000 08:10 58109                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_struct.cpython-38-x86_64-linux-gnu.so
+7f7616c48000-7f7616c49000 rw-p 0000d000 08:10 58109                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_struct.cpython-38-x86_64-linux-gnu.so
+7f7616c49000-7f7616c4a000 r--p 00000000 08:10 58065                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_opcode.cpython-38-x86_64-linux-gnu.so
+7f7616c4a000-7f7616c4b000 r-xp 00001000 08:10 58065                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_opcode.cpython-38-x86_64-linux-gnu.so
+7f7616c4b000-7f7616c4c000 r--p 00002000 08:10 58065                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_opcode.cpython-38-x86_64-linux-gnu.so
+7f7616c4c000-7f7616c4d000 r--p 00002000 08:10 58065                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_opcode.cpython-38-x86_64-linux-gnu.so
+7f7616c4d000-7f7616c4e000 rw-p 00003000 08:10 58065                      /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/lib-dynload/_opcode.cpython-38-x86_64-linux-gnu.so
+7f7616c4e000-7f7616d8e000 rw-p 00000000 00:00 0 
+7f7616d8e000-7f7616dc0000 r--p 00000000 08:10 21552                      /usr/lib/locale/C.UTF-8/LC_CTYPE
+7f7616dc0000-7f76170a6000 r--p 00000000 08:10 3896                       /usr/lib/locale/locale-archive
+7f76170a6000-7f76170a8000 rw-p 00000000 00:00 0 
+7f76170a8000-7f76170ca000 r--p 00000000 08:10 40957                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f76170ca000-7f7617242000 r-xp 00022000 08:10 40957                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f7617242000-7f7617290000 r--p 0019a000 08:10 40957                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f7617290000-7f7617294000 r--p 001e7000 08:10 40957                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f7617294000-7f7617296000 rw-p 001eb000 08:10 40957                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f7617296000-7f761729a000 rw-p 00000000 00:00 0 
+7f761729a000-7f76172a0000 r--p 00000000 08:10 40973                      /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7f76172a0000-7f76172b1000 r-xp 00006000 08:10 40973                      /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7f76172b1000-7f76172b7000 r--p 00017000 08:10 40973                      /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7f76172b7000-7f76172b8000 r--p 0001c000 08:10 40973                      /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7f76172b8000-7f76172b9000 rw-p 0001d000 08:10 40973                      /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7f76172b9000-7f76172bd000 rw-p 00000000 00:00 0 
+7f76172bd000-7f76172ca000 r--p 00000000 08:10 40959                      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f76172ca000-7f7617371000 r-xp 0000d000 08:10 40959                      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f7617371000-7f761740a000 r--p 000b4000 08:10 40959                      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f761740a000-7f761740b000 r--p 0014c000 08:10 40959                      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f761740b000-7f761740c000 rw-p 0014d000 08:10 40959                      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f761740c000-7f761740d000 r--p 00000000 08:10 40977                      /usr/lib/x86_64-linux-gnu/libutil-2.31.so
+7f761740d000-7f761740e000 r-xp 00001000 08:10 40977                      /usr/lib/x86_64-linux-gnu/libutil-2.31.so
+7f761740e000-7f761740f000 r--p 00002000 08:10 40977                      /usr/lib/x86_64-linux-gnu/libutil-2.31.so
+7f761740f000-7f7617410000 r--p 00002000 08:10 40977                      /usr/lib/x86_64-linux-gnu/libutil-2.31.so
+7f7617410000-7f7617411000 rw-p 00003000 08:10 40977                      /usr/lib/x86_64-linux-gnu/libutil-2.31.so
+7f7617411000-7f7617412000 r--p 00000000 08:10 40958                      /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7f7617412000-7f7617414000 r-xp 00001000 08:10 40958                      /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7f7617414000-7f7617415000 r--p 00003000 08:10 40958                      /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7f7617415000-7f7617416000 r--p 00003000 08:10 40958                      /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7f7617416000-7f7617417000 rw-p 00004000 08:10 40958                      /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7f7617417000-7f7617419000 rw-p 00000000 00:00 0 
+7f7617419000-7f761741a000 r--p 00000000 08:10 21553                      /usr/lib/locale/C.UTF-8/LC_IDENTIFICATION
+7f761741a000-7f761741b000 rw-p 00000000 00:00 0 
+7f761741b000-7f7617422000 r--s 00000000 08:10 41227                      /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f7617422000-7f7617423000 r--p 00000000 08:10 40953                      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f7617423000-7f7617446000 r-xp 00001000 08:10 40953                      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f7617446000-7f761744e000 r--p 00024000 08:10 40953                      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f761744e000-7f761744f000 r--p 00000000 00:00 0 
+7f761744f000-7f7617450000 r--p 0002c000 08:10 40953                      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f7617450000-7f7617451000 rw-p 0002d000 08:10 40953                      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f7617451000-7f7617452000 rw-p 00000000 00:00 0 
+7ffca7343000-7ffca7346000 ---p 00000000 00:00 0 
+7ffca7346000-7ffca7443000 rw-p 00000000 00:00 0                          [stack]
+7ffca75b1000-7ffca75b5000 r--p 00000000 00:00 0                          [vvar]
+7ffca75b5000-7ffca75b6000 r-xp 00000000 00:00 0                          [vdso]
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF8 -ea -Xmx1024m 
+java_command: <unknown>
+java_class_path (initial): /home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/bin:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/jhannanum-0.8.4.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/aho-corasick.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/shineware-common-1.0.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/shineware-ds-1.0.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/open-korean-text-2.1.0.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/scala-library-2.12.3.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/snakeyaml-1.12.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/twitter-text-1.14.7.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/komoran-3.0.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/kkma-2.0.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/jhannanum-0.8.4.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/kkma-2.0.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/aho-corasick.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/shineware-common-1.0.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/shineware-ds-1.0.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/komoran-3.0.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/snakeyaml-1.12.jar:/home/taemin/apps/miniconda3/envs/py38/lib/python3.8/site-packages/konlpy/java/scala-library-2.12.3.jar:/home/taemin/apps/minico
+Launcher Type: generic
+
+Environment Variables:
+JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+PATH=/home/taemin/apps/miniconda3/envs/py38/bin:/home/taemin/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli:/home/taemin/apps/miniconda3/envs/py38/bin:/home/taemin/apps/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.UbuntuonWindows_2004.2022.1.0_x64__79rhkp1fndgsc:/mnt/c/Program Files/Microsoft/jdk-11.0.12.7-hotspot/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/dotnet:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/DCU/corretto/jdk11.0.13_8/bin:/mnt/c/Program Files/R/R-4.1.1/bin/x64:/mnt/c/Program Files/Microsoft/jdk-11.0.12.7-hotspot/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/dotnet:/mnt/c/Users/DCU/corretto/jdk11.0.13_8/bin:/mnt/c/Users/DCU/anaconda3:/mnt/c/Users/DCU/anaconda3/Library/mingw-w64/bin:/mnt/c/Users/DCU/anaconda3/Library/usr/bin:/mnt/c/Users/DCU/anaconda3/Library/bin:/mnt/c/Users/DCU/anaconda3/Scripts:/mnt/c/Users/DCU/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/RStudio/bin/rpostback:/mnt/c/Program Files/RStudio/bin/postback:/mnt/c/Users/DCU/.dotnet/tools:/mnt/c/Users/DCU/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin
+SHELL=/bin/bash
+HOSTTYPE=x86_64
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xb373b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xb373b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x97bff0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x97bff0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x97bff0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x97bff0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x97bea0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x97c270], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [python+0x253a40], sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: [libjvm.so+0x97c270], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x97c270], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=20.04
+DISTRIB_CODENAME=focal
+DISTRIB_DESCRIPTION="Ubuntu 20.04.4 LTS"
+
+uname:Linux 5.10.102.1-microsoft-standard-WSL2 #1 SMP Wed Mar 2 00:30:59 UTC 2022 x86_64
+libc:glibc 2.31 NPTL 2.31 
+rlimit: STACK 8192k, CORE 0k, NPROC 50932, NOFILE 4096, AS infinity
+load average:0.13 0.22 0.18
+
+/proc/meminfo:
+MemTotal:       13043624 kB
+MemFree:        11140884 kB
+MemAvailable:   11224460 kB
+Buffers:           32708 kB
+Cached:           271844 kB
+SwapCached:            0 kB
+Active:           160212 kB
+Inactive:        1585716 kB
+Active(anon):        184 kB
+Inactive(anon):  1441260 kB
+Active(file):     160028 kB
+Inactive(file):   144456 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       4194304 kB
+SwapFree:        4194304 kB
+Dirty:                60 kB
+Writeback:             0 kB
+AnonPages:       1427096 kB
+Mapped:            87120 kB
+Shmem:                68 kB
+KReclaimable:      30324 kB
+Slab:              55004 kB
+SReclaimable:      30324 kB
+SUnreclaim:        24680 kB
+KernelStack:        4000 kB
+PageTables:        34156 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    10716116 kB
+Committed_AS:    1621536 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       24512 kB
+VmallocChunk:          0 kB
+Percpu:             1344 kB
+AnonHugePages:    499712 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:       17408 kB
+DirectMap2M:     3928064 kB
+DirectMap1G:     9437184 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0-3
+cpu_memory_nodes: 0
+active_processor_count: 4
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -1
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 1773260800
+memory_max_usage_in_bytes: 525049856
+
+
+CPU:total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 6 model 94 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, tsc, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 94
+model name	: Intel(R) Core(TM) i5-6400 CPU @ 2.70GHz
+stepping	: 3
+microcode	: 0xffffffff
+cpu MHz		: 2711.999
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 4
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 21
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves md_clear flush_l1d arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds
+bogomips	: 5423.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 94
+model name	: Intel(R) Core(TM) i5-6400 CPU @ 2.70GHz
+stepping	: 3
+microcode	: 0xffffffff
+cpu MHz		: 2711.999
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 4
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 21
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves md_clear flush_l1d arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds
+bogomips	: 5423.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 94
+model name	: Intel(R) Core(TM) i5-6400 CPU @ 2.70GHz
+stepping	: 3
+microcode	: 0xffffffff
+cpu MHz		: 2711.999
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 2
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 21
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves md_clear flush_l1d arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds
+bogomips	: 5423.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 94
+model name	: Intel(R) Core(TM) i5-6400 CPU @ 2.70GHz
+stepping	: 3
+microcode	: 0xffffffff
+cpu MHz		: 2711.999
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 3
+cpu cores	: 4
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 21
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves md_clear flush_l1d arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds
+bogomips	: 5423.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 13043624k(11140632k free), swap 4194304k(4194304k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.312-b07) for linux-amd64 JRE (1.8.0_312-8u312-b07-0ubuntu1~20.04-b07), built on Nov  3 2021 13:54:59 by "buildd" with gcc 9.3.0
+
+time: Thu May 19 09:24:53 2022
+timezone: KST
+elapsed time: 59.020247 seconds (0d 0h 0m 59s)
+
