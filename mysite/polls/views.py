@@ -93,7 +93,7 @@ def showwordcloud(request):
     columns = ['날씨', '신문사', '제목', '내용']
     df = pd.DataFrame(columns=columns)
 
-    query = '달러'
+    # query = '달러'
     s_date = "2022.06.01"
     e_date = "2022.06.10"
     s_from = s_date.replace(".","")
@@ -170,12 +170,12 @@ def showwordcloud(request):
     from wordcloud import WordCloud
     from collections import Counter
 
-    font_path = '/Users/taemin/Library/Fonts/AppleSDGothicNeo.ttc'
+    font_path = "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"
 
     wordcloud = WordCloud(
         font_path = font_path,
-        width=800,
-        height=800,
+        width=300,
+        height=300,
         background_color="white"
     )
 
